@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Damta</string>
+
+    <string name="loading_text">내 주변 흡연 구역은?</string>
 </resources>
