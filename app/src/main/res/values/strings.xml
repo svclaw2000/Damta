@@ -2,4 +2,16 @@
     <string name="app_name">Damta</string>
 
     <string name="loading_text">내 주변 흡연 구역은?</string>
+    <string name="login_title">슬기로운 흡연 생활\n담타 DAMTA !</string>
+    <string name="login_btn">로그인</string>
+    <string name="login_register_btn">회원가입</string>
+    <string name="next">다음</string>
+    <string name="finish">완료</string>
+
+    <string name="register_title">정보를\n입력하세요!</string>
+    <string name="user_id">아이디</string>
+    <string name="user_pw">비밀번호</string>
+    <string name="user_nick">이름(닉네임)</string>
+    <string name="user_bday">생년월일</string>
+    <string name="user_email">이메일</string>
 </resources>

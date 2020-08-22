@@ -31,11 +31,10 @@ class LoadingActivity : AppCompatActivity() {
 
         override fun onAnimationStart(p0: Animation?) {
         }
-
     }
 
     private fun startMain() {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, RegisterActivity2::class.java)
         startActivity(intent)
     }
 }

@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/loading_text"
-        android:fontFamily="@font/noto_sans_cjk_kr_black"
+        android:fontFamily="@font/gmarket_sans_medium"
         android:gravity="center"
         android:textColor="@color/loading_text"
         android:textSize="@dimen/loading_text"

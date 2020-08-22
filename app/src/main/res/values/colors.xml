@@ -4,5 +4,12 @@
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
 
+    <color name="background">#FFFFFF</color>
+    <color name="dark">#2C2F33</color>
+    <color name="highlight">#48CFAD</color>
+
     <color name="loading_text">#FFFFFF</color>
+
+    <color name="login_text">#FFFFFF</color>
+    <color name="login_title">#000000</color>
 </resources>

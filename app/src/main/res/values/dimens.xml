@@ -2,4 +2,22 @@
 <resources>
     <dimen name="loading_text">30sp</dimen>
     <dimen name="loading_text2">19sp</dimen>
+
+    <dimen name="login_dirt_width">85dp</dimen>
+    <dimen name="login_dirt_height">125dp</dimen>
+    <dimen name="login_dirt_margin">30dp</dimen>
+    <dimen name="login_title_text">30sp</dimen>
+    <dimen name="login_text">18sp</dimen>
+    <dimen name="login_title_margin">15dp</dimen>
+    <dimen name="login_icon">40dp</dimen>
+    <dimen name="login_padding_horizontal">40dp</dimen>
+    <dimen name="login_btn_padding">10dp</dimen>
+
+    <dimen name="register_padding_horizontal">20dp</dimen>
+    <dimen name="register_content_padding_horizontal">15dp</dimen>
+    <dimen name="register_padding_top">40dp</dimen>
+    <dimen name="register_subtitle_text">20sp</dimen>
+    <dimen name="register_text">15sp</dimen>
+    <dimen name="register_title_text">30sp</dimen>
+    <dimen name="register_title_margin_top">60dp</dimen>
 </resources>
