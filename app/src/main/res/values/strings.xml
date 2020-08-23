@@ -14,4 +14,20 @@
     <string name="user_nick">이름(닉네임)</string>
     <string name="user_bday">생년월일</string>
     <string name="user_email">이메일</string>
+
+    <string name="place_type_opened">개방형</string>
+    <string name="place_type_closed">폐쇄형</string>
+    <string name="place_type_fullyclosed">완전폐쇄형</string>
+
+    <string name="information_title_opened">*개방형</string>
+    <string name="information_opened">벽면의 전부 또는 일부를 개방해 공기의 자연이동을 이용한 환기</string>
+
+    <string name="information_title_closed">*폐쇄형</string>
+    <string name="information_closed">자연환기 : 별도의 담배연기 정화장치 없음\n단순배출 : 공기의 자연이동을 이용한 환기와 환풍기 동시 사용</string>
+
+    <string name="information_title_fullyclosed">*완전폐쇄형</string>
+    <string name="information_fullyclosed">단순배출 : 공기의 자연이동을 이용한 환기와 환풍기 동시 사용\n정화배출 : 제연기를 이용해 오염된 실내 공기를 정화시키고 밖으로 배출</string>
+
+    <string name="decision_close">닫기</string>
+    <string name="decision_confirm">완료</string>
 </resources>

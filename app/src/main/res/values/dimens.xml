@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="circle_corner">50dp</dimen>
+    <dimen name="line">1dp</dimen>
+    <dimen name="line_margin">5dp</dimen>
+    <dimen name="small_icon">25dp</dimen>
+    <dimen name="medium_icon">40dp</dimen>
+    <dimen name="large_icon">50dp</dimen>
+    <dimen name="popup_corner">10dp</dimen>
+
     <dimen name="loading_text">30sp</dimen>
     <dimen name="loading_text2">19sp</dimen>
 
@@ -9,7 +17,6 @@
     <dimen name="login_title_text">30sp</dimen>
     <dimen name="login_text">18sp</dimen>
     <dimen name="login_title_margin">15dp</dimen>
-    <dimen name="login_icon">40dp</dimen>
     <dimen name="login_padding_horizontal">40dp</dimen>
     <dimen name="login_btn_padding">10dp</dimen>
 
@@ -20,4 +27,22 @@
     <dimen name="register_text">15sp</dimen>
     <dimen name="register_title_text">30sp</dimen>
     <dimen name="register_title_margin_top">60dp</dimen>
+
+    <dimen name="main_settings_icon">40dp</dimen>
+    <dimen name="main_search_stroke">2dp</dimen>
+    <dimen name="main_search_margin">20dp</dimen>
+    <dimen name="main_search_padding_horizontal">15dp</dimen>
+    <dimen name="main_search_text">16sp</dimen>
+    <dimen name="main_gps_icon">100dp</dimen>
+
+    <dimen name="place_checkbox_text">18sp</dimen>
+    <dimen name="place_checkbox_margin_vertical">5dp</dimen>
+    <dimen name="place_checkbox_margin">25dp</dimen>
+    <dimen name="place_popup_margin_horizontal">40dp</dimen>
+    <dimen name="place_decision_text">15sp</dimen>
+    <dimen name="place_decision_padding_vertical">5dp</dimen>
+    <dimen name="place_information_title_text">13sp</dimen>
+    <dimen name="place_information_text">12sp</dimen>
+    <dimen name="place_information_title_margin_end">5dp</dimen>
+    <dimen name="place_information_margin_vertical">10dp</dimen>
 </resources>

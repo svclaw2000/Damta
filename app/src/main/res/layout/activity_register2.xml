@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="@android:color/white"
     android:paddingHorizontal="@dimen/register_padding_horizontal"
     android:paddingTop="@dimen/register_padding_top">
 
@@ -16,8 +16,8 @@
         android:gravity="center">
 
         <ImageView
-            android:layout_width="@dimen/login_icon"
-            android:layout_height="@dimen/login_icon"
+            android:layout_width="@dimen/medium_icon"
+            android:layout_height="@dimen/medium_icon"
             android:src="@drawable/back_arrow"/>
 
         <Space

@@ -8,4 +8,29 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
     </style>
+
+    <style name="PlaceCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:button">@null</item>
+        <item name="android:drawableRight">?android:attr/listChoiceIndicatorSingle</item>
+        <item name="android:textSize">@dimen/place_checkbox_text</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_bold</item>
+        <item name="android:textColor">@color/dark</item>
+        <item name="android:layout_marginVertical">@dimen/place_checkbox_margin_vertical</item>
+    </style>
+
+    <style name="SplitLineHorizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line</item>
+        <item name="android:background">@color/dark</item>
+        <item name="android:layout_marginHorizontal">@dimen/line_margin</item>
+    </style>
+
+    <style name="SplitLineVertical">
+        <item name="android:layout_width">@dimen/line</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/dark</item>
+        <item name="android:layout_marginVertical">@dimen/line_margin</item>
+    </style>
 </resources>

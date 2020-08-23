@@ -57,8 +57,8 @@
             android:gravity="center" >
 
             <ImageView
-                android:layout_width="@dimen/login_icon"
-                android:layout_height="@dimen/login_icon"
+                android:layout_width="@dimen/medium_icon"
+                android:layout_height="@dimen/medium_icon"
                 android:src="@drawable/login_id" />
 
             <EditText
@@ -66,7 +66,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="@dimen/login_text"
-                android:backgroundTint="@color/login_text"/>
+                android:backgroundTint="@android:color/white"/>
         </LinearLayout>
 
         <Space
@@ -80,8 +80,8 @@
             android:gravity="center">
 
             <ImageView
-                android:layout_width="@dimen/login_icon"
-                android:layout_height="@dimen/login_icon"
+                android:layout_width="@dimen/medium_icon"
+                android:layout_height="@dimen/medium_icon"
                 android:src="@drawable/login_pw" />
 
             <EditText
@@ -89,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="@dimen/login_text"
-                android:backgroundTint="@color/login_text"/>
+                android:backgroundTint="@android:color/white"/>
         </LinearLayout>
 
         <Space
@@ -101,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/login_btn"
-            android:textColor="@color/login_text"
+            android:textColor="@android:color/white"
             android:gravity="center"
             android:padding="@dimen/login_btn_padding"
             android:background="@drawable/btn_login"
@@ -119,7 +119,7 @@
             android:text="@string/login_register_btn"
             android:fontFamily="@font/noto_sans_cjk_kr_bold"
             android:textSize="@dimen/login_text"
-            android:textColor="@color/login_text"
+            android:textColor="@android:color/white"
             android:layout_gravity="center"/>
 
         <Space

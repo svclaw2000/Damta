@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import com.gun0912.tedpermission.PermissionListener
+import com.gun0912.tedpermission.TedPermission
 import kotlinx.android.synthetic.main.activity_loading.*
+import java.util.ArrayList
 
 class LoadingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,15 +29,29 @@ class LoadingActivity : AppCompatActivity() {
         }
 
         override fun onAnimationEnd(p0: Animation?) {
-            startMain()
+            requestPermission()
         }
 
         override fun onAnimationStart(p0: Animation?) {
         }
     }
 
-    private fun startMain() {
-        val intent = Intent(this, RegisterActivity2::class.java)
-        startActivity(intent)
+    fun requestPermission() {
+        TedPermission.with(this@LoadingActivity)
+            .setPermissionListener(permissionListener)
+            .setPermissions(android.Manifest.permission.INTERNET, android.Manifest.permission.ACCESS_FINE_LOCATION)
+            .check()
+    }
+
+    var permissionListener = object : PermissionListener {
+        override fun onPermissionGranted() {
+            val intent = Intent(this@LoadingActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        override fun onPermissionDenied(deniedPermissions: ArrayList<String>?) {
+            finish()
+        }
     }
 }

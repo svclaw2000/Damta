@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/shadowed"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/popup_box"
+        android:layout_marginHorizontal="@dimen/place_popup_margin_horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/place_checkbox_margin">
+
+            <CheckBox
+                style="@style/PlaceCheckBox"
+                android:text="@string/place_type_opened" />
+
+            <CheckBox
+                style="@style/PlaceCheckBox"
+                android:text="@string/place_type_closed" />
+
+            <CheckBox
+                style="@style/PlaceCheckBox"
+                android:text="@string/place_type_fullyclosed" />
+        </LinearLayout>
+
+        <View
+            style="@style/SplitLineHorizontal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="@string/decision_close"
+                android:textColor="@color/half_dark"
+                android:gravity="center"
+                android:fontFamily="@font/noto_sans_cjk_kr_black"
+                android:textSize="@dimen/place_decision_text"
+                android:paddingVertical="@dimen/place_decision_padding_vertical"/>
+
+            <View
+                style="@style/SplitLineVertical" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="@string/decision_confirm"
+                android:textColor="@color/dark"
+                android:gravity="center"
+                android:fontFamily="@font/noto_sans_cjk_kr_black"
+                android:textSize="@dimen/place_decision_text"
+                android:paddingVertical="@dimen/place_decision_padding_vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/place_popup_margin_horizontal"
+        android:layout_marginVertical="@dimen/place_information_margin_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="@dimen/medium_icon"
+            android:layout_height="@dimen/medium_icon"
+            android:src="@drawable/information"/>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_title_opened"
+                    android:textColor="@android:color/white"
+                    android:shadowRadius="5.0"
+                    android:shadowColor="@color/shadowed_highlight"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"
+                    android:textSize="@dimen/place_information_title_text"
+                    android:layout_marginEnd="@dimen/place_information_title_margin_end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_opened"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/noto_sans_cjk_kr_regular"
+                    android:textSize="@dimen/place_information_title_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_title_closed"
+                    android:textColor="@android:color/white"
+                    android:shadowRadius="5.0"
+                    android:shadowColor="@color/shadowed_highlight"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"
+                    android:textSize="@dimen/place_information_title_text"
+                    android:layout_marginEnd="@dimen/place_information_title_margin_end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_closed"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/noto_sans_cjk_kr_regular"
+                    android:textSize="@dimen/place_information_title_text"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_title_fullyclosed"
+                    android:textColor="@android:color/white"
+                    android:shadowRadius="5.0"
+                    android:shadowColor="@color/shadowed_highlight"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"
+                    android:textSize="@dimen/place_information_title_text"
+                    android:layout_marginEnd="@dimen/place_information_title_margin_end"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/information_fullyclosed"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/noto_sans_cjk_kr_regular"
+                    android:textSize="@dimen/place_information_title_text"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
