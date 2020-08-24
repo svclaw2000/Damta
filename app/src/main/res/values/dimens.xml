@@ -2,11 +2,15 @@
 <resources>
     <dimen name="circle_corner">50dp</dimen>
     <dimen name="line">1dp</dimen>
+    <dimen name="strong_line">2dp</dimen>
     <dimen name="line_margin">5dp</dimen>
     <dimen name="small_icon">25dp</dimen>
     <dimen name="medium_icon">40dp</dimen>
     <dimen name="large_icon">50dp</dimen>
     <dimen name="popup_corner">10dp</dimen>
+    <dimen name="topbar_padding_horizontal">20dp</dimen>
+    <dimen name="back_margin">20dp</dimen>
+    <dimen name="title_text">20sp</dimen>
 
     <dimen name="loading_text">30sp</dimen>
     <dimen name="loading_text2">19sp</dimen>
@@ -27,6 +31,8 @@
     <dimen name="register_text">15sp</dimen>
     <dimen name="register_title_text">30sp</dimen>
     <dimen name="register_title_margin_top">60dp</dimen>
+    <dimen name="register_number_margin_top">55dp</dimen>
+    <dimen name="register_title_margin_start">5dp</dimen>
 
     <dimen name="main_settings_icon">40dp</dimen>
     <dimen name="main_search_stroke">2dp</dimen>
@@ -45,4 +51,67 @@
     <dimen name="place_information_text">12sp</dimen>
     <dimen name="place_information_title_margin_end">5dp</dimen>
     <dimen name="place_information_margin_vertical">10dp</dimen>
+
+    <dimen name="detail_more_review_text">15sp</dimen>
+    <dimen name="detail_more_review_padding">10dp</dimen>
+    <dimen name="detail_more_review_space">10dp</dimen>
+    <dimen name="detail_bookmark_width">40dp</dimen>
+    <dimen name="detail_bookmark_height">70dp</dimen>
+    <dimen name="detail_density_width">25dp</dimen>
+    <dimen name="detail_density_height">44dp</dimen>
+    <dimen name="detail_density_text">9sp</dimen>
+    <dimen name="detail_type_text">10sp</dimen>
+    <dimen name="detail_name_text">20sp</dimen>
+    <dimen name="detail_address_text">12sp</dimen>
+    <dimen name="detail_thumb_text">13sp</dimen>
+    <dimen name="detail_address_margin_vertical">10dp</dimen>
+    <dimen name="detail_btn_corner">15dp</dimen>
+    <dimen name="detail_btn_text">14sp</dimen>
+    <dimen name="detail_btn_text_space">10dp</dimen>
+    <dimen name="detail_btn_space">15dp</dimen>
+    <dimen name="detail_btn_margin_vertical">30dp</dimen>
+    <dimen name="detail_btn_padding_vertical">10dp</dimen>
+    <dimen name="detail_subtitle_text">15sp</dimen>
+    <dimen name="detail_subtitle_margin_top">10dp</dimen>
+    <dimen name="detail_related_facility_text">12sp</dimen>
+    <dimen name="detail_subcontent_margin">20dp</dimen>
+
+    <dimen name="review_margin_vertical">10dp</dimen>
+    <dimen name="review_margin_horizontal">20dp</dimen>
+    <dimen name="review_title_margin_horizontal">5dp</dimen>
+    <dimen name="review_id_text">11sp</dimen>
+    <dimen name="review_date_text">8sp</dimen>
+    <dimen name="review_text">10sp</dimen>
+    <dimen name="review_corner">5dp</dimen>
+    <dimen name="review_padding_horizontal">15dp</dimen>
+    <dimen name="review_padding_vertical">10dp</dimen>
+    <dimen name="review_content_margin_top">5dp</dimen>
+
+    <dimen name="register_place_question_text">15sp</dimen>
+    <dimen name="register_place_question_margin">20dp</dimen>
+    <dimen name="register_place_question_margin_top">30dp</dimen>
+    <dimen name="register_place_answer_padding">5dp</dimen>
+    <dimen name="register_place_check_standard_text">14sp</dimen>
+    <dimen name="register_place_check_standard_margin_vertical">20dp</dimen>
+
+    <dimen name="register_checkbox_margin_vertical">10dp</dimen>
+    <dimen name="register_checkbox_margin_horizontal">20dp</dimen>
+    <dimen name="register_information_corner">40dp</dimen>
+
+    <dimen name="register_density_width">45dp</dimen>
+    <dimen name="register_density_height">85dp</dimen>
+    <dimen name="register_density_text">13sp</dimen>
+    <dimen name="register_density_margin_horizontal">5dp</dimen>
+    <dimen name="register_image_btn_padding_horizontal">15dp</dimen>
+    <dimen name="register_image_btn_padding_vertical">5dp</dimen>
+    <dimen name="register_image_btn_margin_top">20dp</dimen>
+    <dimen name="register_image_btn_text">13sp</dimen>
+
+    <dimen name="standard_title_text">18sp</dimen>
+    <dimen name="standard_number_text">17sp</dimen>
+    <dimen name="standard_number">30dp</dimen>
+    <dimen name="standard_text">15sp</dimen>
+    <dimen name="standard_remark_text">10sp</dimen>
+    <dimen name="standard_margin">20dp</dimen>
+    <dimen name="standard_content_margin">10dp</dimen>
 </resources>

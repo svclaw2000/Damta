@@ -6,9 +6,14 @@
 
     <color name="dark">#2C2F33</color>
     <color name="half_dark">#802C2F33</color>
+    <color name="quarter_dark">#4D2C2F33</color>
+    <color name="gray">#848484</color>
     <color name="highlight">#48CFAD</color>
     <color name="invisible">#00000000</color>
     <color name="shadowed">#CC343434</color>
 
     <color name="shadowed_highlight">#48CFAD</color>
+    <color name="review_background">#E9E9EA</color>
+    <color name="standard_remark">#535A64</color>
+    <color name="register_place_dark">#646464</color>
 </resources>

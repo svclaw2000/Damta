@@ -13,3 +13,4 @@
 .externalNativeBuild
 .cxx
 /designs/drawable*
+/designs/assets

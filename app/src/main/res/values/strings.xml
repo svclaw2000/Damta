@@ -7,6 +7,7 @@
     <string name="login_register_btn">회원가입</string>
     <string name="next">다음</string>
     <string name="finish">완료</string>
+    <string name="confirm">확인</string>
 
     <string name="register_title">정보를\n입력하세요!</string>
     <string name="user_id">아이디</string>
@@ -30,4 +31,65 @@
 
     <string name="decision_close">닫기</string>
     <string name="decision_confirm">완료</string>
+
+    <string name="more_review">방문자 리뷰 더보기</string>
+    <string name="more_photo">사진 더보기</string>
+
+    <string name="density_low">여유</string>
+    <string name="density_medium">보통</string>
+    <string name="density_high">혼잡</string>
+
+    <string name="detail_navigation">길찾기</string>
+    <string name="detail_share">공유</string>
+
+    <string name="related_facility">관련시설</string>
+    <string name="ashtray">재떨이</string>
+    <string name="vent">환풍구</string>
+    <string name="bench">벤치</string>
+    <string name="machine">자판기</string>
+
+    <string name="photo">사진</string>
+    <string name="review">리뷰</string>
+
+    <string name="register_place">흡연구역 등록요청</string>
+    <string name="question_1">보행자 주 통행로에서 20미터 이상 떨어져 있습니까?</string>
+    <string name="question_2">화기성 물질로부터 안전한 거리가 확보되어 있습니까?</string>
+    <string name="question_3">다른 실외 흡연구역으로 부터 500m 떨어져 있습니까?</string>
+    <string name="question_yes">예</string>
+    <string name="question_no">아니오</string>
+    <string name="question_idk">잘 모르겠음</string>
+    <string name="check_register_standard"><u>실외 흡연구역 지정 권고 기준 확인하기</u></string>
+
+    <string name="register_standard">실외 흡연구역 지정 권고 기준</string>
+    <string name="number_1">1</string>
+    <string name="number_2">2</string>
+    <string name="number_3">3</string>
+    <string name="number_4">4</string>
+    <string name="number_5">5</string>
+    <string name="register_standard_1">보행자의 주 통행로로부터 20미터 이상 떨어진 곳으로 보행자의 간접흡연이 발생하지 않는 적절한 위치에 지정</string>
+    <string name="register_standard_1_remark">(다만, 개별 입지의 특성 등을 고려하여 부득이한 경우 20미터 이내의 거리를 두고 지정할 수 있음)</string>
+    <string name="register_standard_2">건물 옥상의 경우 공조시설을 고려하여 지정하며, 화기성 물질을 포함하는 시설로부터 안전한 거리를 확보해야 함</string>
+    <string name="register_standard_3">유치원ㆍ병의원ㆍ학교 등의 인근과 주거밀집지역은 실외 흡연가능 구역의 지정을 최소화해야 함</string>
+    <string name="register_standard_4">실외 흡연구역 간 500미터 이상의 거리를 지정</string>
+    <string name="register_standard_4_remark">(다만, 개별 입지의 특성과 간접흡연 피해 정도를 고려하여 부득이한 경우 500미터 이내의 거리를 두고 지정할 수 있음)</string>
+    <string name="register_standard_5">실외 흡연구역 1개소의 면적과 개수는 길거리 간접흡연 피해의 정도, 유동인구 및 흡연인구 등을 종합적으로 고려하여 최소한의 범위에서 지정할 수 있음</string>
+
+    <string name="register_information_1">등록을 원하시는\n장소의 이름을\n기입하세요!</string>
+    <string name="register_information_2">등록을 원하시는\n장소의 위치를\n기입하세요!</string>
+    <string name="register_information_3">등록을 원하시는\n장소의 시설를\n확인해주세요!</string>
+    <string name="register_information_4">등록을 원하시는\n장소의 유형을\n선택해주세요!</string>
+    <string name="register_information_5">등록을 원하시는\n장소의 밀집도를\n입력해주세요!</string>
+    <string name="register_information_6">등록을 원하시는\n장소의 사진을\n첨부해주세요!</string>
+    <string name="attach_image">이미지 첨부</string>
+    <string name="thank_message">소중한 의견\n감사합니다 :)</string>
+
+    <string name="number_point_1">1.</string>
+    <string name="number_point_2">2.</string>
+    <string name="number_point_3">3.</string>
+    <string name="number_point_4">4.</string>
+    <string name="number_point_5">5.</string>
+    <string name="number_point_6">6.</string>
+
+    <string name="place_name">이름</string>
+    <string name="place_address">주소(상세주소)</string>
 </resources>

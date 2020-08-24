@@ -12,9 +12,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true" >
-        <meta-data android:name="com.kakao.sdk.AppKey" android:value="de405a507464fd8193bc236dca4735de"/>
-        <activity android:name=".RegisterActivity2"></activity>
+        android:usesCleartextTraffic="true">
+        <activity android:name=".RegisterPlaceActivity7"></activity>
+        <activity android:name=".RegisterPlaceActivity6" />
+        <activity android:name=".RegisterPlaceActivity5" />
+        <activity android:name=".RegisterPlaceActivity4" />
+        <activity android:name=".RegisterPlaceActivity3" />
+        <activity android:name=".RegisterPlaceActivity2" />
+        <activity android:name=".RegisterPlaceActivity1" />
+        <activity android:name=".CheckPlaceStandardActivity" />
+        <activity android:name=".RegisterPlaceActivity" />
+        <activity android:name=".MorePhotoActivity" />
+        <activity android:name=".MoreReviewActivity" />
+        <activity android:name=".DetailActivity" />
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="de405a507464fd8193bc236dca4735de" />
+
+        <activity android:name=".RegisterActivity2" />
         <activity android:name=".RegisterActivity1" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".LoadingActivity">
@@ -26,4 +42,5 @@
         </activity>
         <activity android:name=".MainActivity" />
     </application>
+
 </manifest>

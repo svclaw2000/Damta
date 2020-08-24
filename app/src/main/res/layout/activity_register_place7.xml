@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thank_message"
+        android:fontFamily="@font/noto_sans_cjk_kr_bold"
+        android:textSize="@dimen/register_title_text"
+        android:textColor="@color/dark"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textSize="@dimen/detail_more_review_text"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textColor="@android:color/white"
+        android:padding="@dimen/detail_more_review_padding" />
+</LinearLayout>

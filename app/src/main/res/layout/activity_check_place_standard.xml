@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="@dimen/medium_icon"
+        android:layout_height="@dimen/medium_icon"
+        android:src="@drawable/back_arrow"
+        android:layout_gravity="bottom|start"
+        android:layout_marginTop="@dimen/back_margin"
+        android:layout_marginHorizontal="@dimen/topbar_padding_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_standard"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/standard_title_text"
+        android:fontFamily="@font/noto_sans_cjk_kr_bold"
+        android:layout_gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_width="@dimen/standard_number"
+                    android:layout_height="@dimen/standard_number"
+                    android:background="@drawable/btn_highlight"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/standard_content_margin"
+                    android:text="@string/number_1"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/standard_number_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/standard_content_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_standard_1"
+                        android:textSize="@dimen/standard_text"
+                        android:textColor="@color/dark"
+                        android:fontFamily="@font/noto_sans_cjk_kr_medium"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_standard_1_remark"
+                        android:textSize="@dimen/standard_remark_text"
+                        android:textColor="@color/standard_remark"
+                        android:fontFamily="@font/noto_sans_cjk_kr_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_width="@dimen/standard_number"
+                    android:layout_height="@dimen/standard_number"
+                    android:background="@drawable/btn_highlight"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/standard_content_margin"
+                    android:text="@string/number_2"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/standard_number_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_standard_2"
+                    android:textSize="@dimen/standard_text"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                    android:layout_marginEnd="@dimen/standard_content_margin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_width="@dimen/standard_number"
+                    android:layout_height="@dimen/standard_number"
+                    android:background="@drawable/btn_highlight"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/standard_content_margin"
+                    android:text="@string/number_3"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/standard_number_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_standard_3"
+                    android:textSize="@dimen/standard_text"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                    android:layout_marginEnd="@dimen/standard_content_margin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_width="@dimen/standard_number"
+                    android:layout_height="@dimen/standard_number"
+                    android:background="@drawable/btn_highlight"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/standard_content_margin"
+                    android:text="@string/number_4"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/standard_number_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/standard_content_margin">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_standard_4"
+                        android:textSize="@dimen/standard_text"
+                        android:textColor="@color/dark"
+                        android:fontFamily="@font/noto_sans_cjk_kr_medium"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/register_standard_4_remark"
+                        android:textSize="@dimen/standard_remark_text"
+                        android:textColor="@color/standard_remark"
+                        android:fontFamily="@font/noto_sans_cjk_kr_regular"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/standard_margin">
+
+                <TextView
+                    android:layout_width="@dimen/standard_number"
+                    android:layout_height="@dimen/standard_number"
+                    android:background="@drawable/btn_highlight"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/standard_content_margin"
+                    android:text="@string/number_5"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/standard_number_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/register_standard_5"
+                    android:textSize="@dimen/standard_text"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                    android:layout_marginEnd="@dimen/standard_content_margin"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        android:gravity="center"
+        android:text="@string/finish"
+        android:textSize="@dimen/detail_more_review_text"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="@dimen/detail_more_review_space"
+        android:padding="@dimen/detail_more_review_padding" />
+</LinearLayout>
