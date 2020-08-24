@@ -13,7 +13,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RegisterPlaceActivity7"></activity>
+        <activity android:name=".ServiceActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".ReviewActivity" />
+        <activity android:name=".BookmarkActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".MypageActivity" />
+        <activity android:name=".RegisterPlaceActivity7" />
         <activity android:name=".RegisterPlaceActivity6" />
         <activity android:name=".RegisterPlaceActivity5" />
         <activity android:name=".RegisterPlaceActivity4" />

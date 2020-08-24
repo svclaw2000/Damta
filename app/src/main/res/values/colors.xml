@@ -16,4 +16,8 @@
     <color name="review_background">#E9E9EA</color>
     <color name="standard_remark">#535A64</color>
     <color name="register_place_dark">#646464</color>
+    <color name="mypage_gray">#747474</color>
+    <color name="mypage_half_gray">#80747474</color>
+    <color name="bookmark_gray">#848484</color>
+    <color name="settings_split">#707070</color>
 </resources>

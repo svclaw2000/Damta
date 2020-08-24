@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/topbar_padding_horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/medium_icon"
+            android:layout_height="@dimen/medium_icon"
+            android:src="@drawable/back_arrow"
+            android:layout_gravity="bottom|start"
+            android:layout_marginVertical="@dimen/back_margin" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mypage_title_green"
+                android:layout_marginStart="@dimen/mypage_title_green_margin_start"
+                android:layout_marginTop="@dimen/mypage_title_green_margin_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/mypage_title_text"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                    android:padding="@dimen/mypage_title_padding"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mypage_title_dark"
+                android:layout_marginStart="@dimen/mypage_title_dark_margin_start"
+                android:layout_marginTop="@dimen/mypage_title_dark_margin_top">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/my_review"
+                    android:textSize="@dimen/mypage_title_text"
+                    android:textColor="@android:color/white"
+                    android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                    android:padding="@dimen/mypage_title_padding"/>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>
