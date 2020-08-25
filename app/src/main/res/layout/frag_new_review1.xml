@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:backgroundTint="@color/invisible"
+        android:hint="@string/new_review_hint"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/service_content_text"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:gravity="top"
+        android:padding="@dimen/service_box_padding"/>
+</LinearLayout>

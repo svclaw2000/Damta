@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ServiceActivity"></activity>
+        <activity android:name=".NewReviewActivity"></activity>
+        <activity android:name=".ServiceActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".BookmarkActivity" />
@@ -36,8 +37,7 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="de405a507464fd8193bc236dca4735de" />
 
-        <activity android:name=".RegisterActivity2" />
-        <activity android:name=".RegisterActivity1" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".LoadingActivity">
             <intent-filter>

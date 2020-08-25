@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/register_content_padding_horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_title"
+        android:fontFamily="@font/noto_sans_cjk_kr_black"
+        android:textSize="@dimen/register_title_text"
+        android:textColor="@color/dark"
+        android:layout_marginTop="@dimen/register_title_margin_top"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="4"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_nick"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textSize="@dimen/register_subtitle_text"
+        android:textColor="@color/dark"/>
+
+    <EditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark"
+        android:paddingHorizontal="@dimen/input_padding_horizontal"
+        tools:text="유정"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textSize="@dimen/register_text"
+        android:textColor="@color/dark"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_bday"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textSize="@dimen/register_subtitle_text"
+        android:textColor="@color/dark"/>
+
+    <EditText
+        android:id="@+id/et_birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark"
+        android:paddingHorizontal="@dimen/input_padding_horizontal"
+        tools:text="1999.11.23"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textSize="@dimen/register_text"
+        android:textColor="@color/dark"
+        android:focusable="false"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/user_email"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textSize="@dimen/register_subtitle_text"
+        android:textColor="@color/dark"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/dark"
+        android:paddingHorizontal="@dimen/input_padding_horizontal"
+        tools:text="s2yujeong@naver.com"
+        android:inputType="textEmailAddress"
+        android:fontFamily="@font/noto_sans_cjk_kr_medium"
+        android:textSize="@dimen/register_text"
+        android:textColor="@color/dark"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="13"/>
+</LinearLayout>

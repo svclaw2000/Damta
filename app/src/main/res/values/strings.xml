@@ -5,7 +5,10 @@
     <string name="loading_text">내 주변 흡연 구역은?</string>
     <string name="login_title">슬기로운 흡연 생활\n담타 DAMTA !</string>
     <string name="login_btn">로그인</string>
-    <string name="login_register_btn">회원가입</string>
+    <string name="login_register">회원가입</string>
+    <string name="save_username">아이디 저장</string>
+    <string name="auto_login">자동 로그인</string>
+
     <string name="next">다음</string>
     <string name="finish">완료</string>
     <string name="confirm">확인</string>
@@ -16,6 +19,14 @@
     <string name="user_nick">이름(닉네임)</string>
     <string name="user_bday">생년월일</string>
     <string name="user_email">이메일</string>
+
+    <string name="register_success">회원가입이 완료되었습니다</string>
+    <string name="error_occured">오류가 발생했습니다.</string>
+
+    <string name="warning_same_username">이미 사용중인 아이디입니다.</string>
+    <string name="warning_empty_field">모든 정보를 입력해야 다음 단계로 이동할 수 있습니다.</string>
+    <string name="warning_age">20세 이상의 성인만 회원가입이 가능합니다.</string>
+    <string name="warning_login_failed">아이디가 존재하지 않거나 비밀번호가 틀렸습니다.</string>
 
     <string name="place_type_opened">개방형</string>
     <string name="place_type_closed">폐쇄형</string>
@@ -51,6 +62,10 @@
 
     <string name="photo">사진</string>
     <string name="review">리뷰</string>
+
+    <string name="new_review">방문자 리뷰 글쓰기</string>
+    <string name="new_review_hint">: 방문 평을 남겨주세요 !</string>
+    <string name="new_review_density">%s에 방문하신\n\"%s\"의\n밀집도를 기록해주세요!</string>
 
     <string name="register_place">흡연구역 등록요청</string>
     <string name="question_1">보행자 주 통행로에서 20미터 이상 떨어져 있습니까?</string>

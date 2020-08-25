@@ -19,5 +19,5 @@
     <color name="mypage_gray">#747474</color>
     <color name="mypage_half_gray">#80747474</color>
     <color name="bookmark_gray">#848484</color>
-    <color name="settings_split">#707070</color>
+    <color name="split_gray">#707070</color>
 </resources>

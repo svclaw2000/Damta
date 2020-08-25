@@ -45,7 +45,7 @@ class LoadingActivity : AppCompatActivity() {
 
     var permissionListener = object : PermissionListener {
         override fun onPermissionGranted() {
-            val intent = Intent(this@LoadingActivity, ServiceActivity::class.java)
+            val intent = Intent(this@LoadingActivity, LoginActivity::class.java)
             startActivity(intent)
             finish()
         }

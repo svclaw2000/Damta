@@ -89,7 +89,7 @@
                 android:backgroundTint="@color/mypage_half_gray"
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                android:paddingHorizontal="@dimen/myprofile_input_padding_horizontal"/>
+                android:paddingHorizontal="@dimen/input_padding_horizontal"/>
         </TableRow>
 
         <TableRow
@@ -109,7 +109,7 @@
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
                 android:focusable="false"
-                android:paddingHorizontal="@dimen/myprofile_input_padding_horizontal"/>
+                android:paddingHorizontal="@dimen/input_padding_horizontal"/>
         </TableRow>
 
         <TableRow
@@ -128,7 +128,7 @@
                 android:backgroundTint="@color/mypage_half_gray"
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                android:paddingHorizontal="@dimen/myprofile_input_padding_horizontal"/>
+                android:paddingHorizontal="@dimen/input_padding_horizontal"/>
         </TableRow>
     </TableLayout>
 

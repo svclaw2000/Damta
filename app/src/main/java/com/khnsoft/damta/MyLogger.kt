@@ -1,7 +1,7 @@
 package com.khnsoft.damta
 
 import android.util.Log
-import com.khnsoft.damta.Utils.LogType
+import com.khnsoft.damta.utils.LogType
 
 class MyLogger {
 	companion object {

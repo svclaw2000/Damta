@@ -61,7 +61,7 @@
     <View
         style="@style/SplitLineHorizontal"
         android:layout_marginTop="@dimen/settings_item_margin_top"
-        android:background="@color/settings_split" />
+        android:background="@color/split_gray" />
 
     <TextView
         android:layout_width="match_parent"
@@ -75,7 +75,7 @@
 
     <View
         style="@style/SplitLineHorizontal"
-        android:background="@color/settings_split"/>
+        android:background="@color/split_gray"/>
 
     <TextView
         android:layout_width="match_parent"
@@ -89,5 +89,5 @@
 
     <View
         style="@style/SplitLineHorizontal"
-        android:background="@color/settings_split"/>
+        android:background="@color/split_gray"/>
 </LinearLayout>

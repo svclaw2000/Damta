@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"><Space
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_review_density"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/new_review_title_text"
+        android:fontFamily="@font/noto_sans_cjk_kr_bold"
+        android:layout_gravity="center"/>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/new_review_density_padding">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <CheckBox
+                android:layout_width="@dimen/register_density_width"
+                android:layout_height="@dimen/register_density_height"
+                android:background="@drawable/density"
+                android:button="@color/invisible"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <CheckBox
+                android:layout_width="@dimen/register_density_width"
+                android:layout_height="@dimen/register_density_height"
+                android:background="@drawable/density"
+                android:button="@color/invisible" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <CheckBox
+                android:layout_width="@dimen/register_density_width"
+                android:layout_height="@dimen/register_density_height"
+                android:background="@drawable/density"
+                android:button="@color/invisible"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <CheckBox
+                android:layout_width="@dimen/register_density_width"
+                android:layout_height="@dimen/register_density_height"
+                android:background="@drawable/density"
+                android:button="@color/invisible" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <CheckBox
+                android:layout_width="@dimen/register_density_width"
+                android:layout_height="@dimen/register_density_height"
+                android:background="@drawable/density"
+                android:button="@color/invisible"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/density_low"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/register_density_text"
+                android:fontFamily="@font/noto_sans_cjk_kr_regular" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/density_medium"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/register_density_text"
+                android:fontFamily="@font/noto_sans_cjk_kr_regular" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/density_high"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/register_density_text"
+                android:fontFamily="@font/noto_sans_cjk_kr_regular" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="3" />
+</LinearLayout>

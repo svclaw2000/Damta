@@ -12,6 +12,7 @@
     <dimen name="back_margin">20dp</dimen>
     <dimen name="title_text">20sp</dimen>
     <dimen name="small_space">5dp</dimen>
+    <dimen name="input_padding_horizontal">10dp</dimen>
 
     <dimen name="loading_text">30sp</dimen>
     <dimen name="loading_text2">19sp</dimen>
@@ -21,13 +22,14 @@
     <dimen name="login_dirt_margin">30dp</dimen>
     <dimen name="login_title_text">30sp</dimen>
     <dimen name="login_text">18sp</dimen>
+    <dimen name="login_checkbox_text">15sp</dimen>
     <dimen name="login_title_margin">15dp</dimen>
     <dimen name="login_padding_horizontal">40dp</dimen>
     <dimen name="login_btn_padding">10dp</dimen>
 
+    <dimen name="register_padding_top">40dp</dimen>
     <dimen name="register_padding_horizontal">20dp</dimen>
     <dimen name="register_content_padding_horizontal">15dp</dimen>
-    <dimen name="register_padding_top">40dp</dimen>
     <dimen name="register_subtitle_text">20sp</dimen>
     <dimen name="register_text">15sp</dimen>
     <dimen name="register_title_text">30sp</dimen>
@@ -76,6 +78,11 @@
     <dimen name="detail_subtitle_margin_top">10dp</dimen>
     <dimen name="detail_related_facility_text">12sp</dimen>
     <dimen name="detail_subcontent_margin">20dp</dimen>
+
+    <dimen name="new_review_topbar_padding_vertical">20dp</dimen>
+    <dimen name="new_review_topbar_padding_horizontal">20dp</dimen>
+    <dimen name="new_review_title_text">20sp</dimen>
+    <dimen name="new_review_density_padding">35dp</dimen>
 
     <dimen name="review_margin_vertical">10dp</dimen>
     <dimen name="review_margin_horizontal">20dp</dimen>
@@ -137,7 +144,6 @@
     <dimen name="mypage_subtitle_margin_vertical">60dp</dimen>
     <dimen name="mypage_subtitle_margin_horizontal">40dp</dimen>
 
-    <dimen name="myprofile_input_padding_horizontal">10dp</dimen>
     <dimen name="myprofile_input_title_margin_horizontal">10dp</dimen>
     <dimen name="myprofile_input_margin_horizontal">20dp</dimen>
     <dimen name="myprofile_input_margin_vertical">5dp</dimen>
