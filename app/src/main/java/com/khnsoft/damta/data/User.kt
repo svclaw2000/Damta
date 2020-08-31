@@ -4,6 +4,7 @@ import android.content.Context
 import com.google.gson.JsonObject
 import com.khnsoft.damta.utils.DatabaseHandler
 import com.khnsoft.damta.utils.SDF
+import java.lang.Exception
 import java.util.*
 
 class User(
@@ -15,17 +16,8 @@ class User(
     var email: String = "",
     var createdDate: Date? = null
 ) {
-
     companion object {
         var current : User? = null
-
-        fun getById(context: Context, id: Int): User? {
-            return DatabaseHandler.getUserById(context, id)
-        }
-
-        fun getByUsername(context: Context, username: String): User? {
-            return DatabaseHandler.getUserByUsername(context, username)
-        }
 
         fun getFromJson(jUser: JsonObject): User {
             return User(
@@ -42,13 +34,99 @@ class User(
         fun hasSameUsername(context: Context, username: String): Boolean {
             return getByUsername(context, username) != null
         }
+
+        fun getById(context: Context, id: Int) : User? {
+            val mHandler = DatabaseHandler.open(context)
+
+            try {
+                val sql = """
+                    SELECT id, username, password, nickname, birthday, email, created_date 
+                    FROM USER_TB
+                    WHERE id=${id}
+                """.trimIndent()
+
+                val jResult = mHandler.read(sql)
+                if (jResult.size() > 0) {
+                    return getFromJson(jResult[0].asJsonObject)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                mHandler.close()
+            }
+
+            return null
+        }
+
+        fun getByUsername(context: Context, username: String) : User? {
+            val mHandler = DatabaseHandler.open(context)
+            try {
+                val sql = """
+                    SELECT id, username, password, nickname, birthday, email, created_date 
+                    FROM USER_TB
+                    WHERE username="${username}"
+                """.trimIndent()
+
+                val jResult = mHandler.read(sql)
+                if (jResult.size() > 0) {
+                    return getFromJson(jResult[0].asJsonObject)
+                }
+            } catch (e: Exception) {
+                e.printStackTrace()
+            } finally {
+                mHandler.close()
+            }
+
+            return null
+        }
     }
 
-    fun add(context: Context): Boolean {
-        return DatabaseHandler.addUser(context, this)
+    fun add(context: Context) : Boolean {
+        val mHandler = DatabaseHandler.open(context)
+
+        try {
+            val sql = """
+                    INSERT INTO USER_TB (username, password, nickname, birthday, email, created_date) 
+                    VALUES (
+                        "${username}",
+                        "${password}",
+                        "${nickname}",
+                        "${SDF.dateBar.format(birthday)}",
+                        "${email}",
+                        "${SDF.dateBar.format(Date())}"
+                    )
+                """.trimIndent()
+
+            mHandler.write(sql)
+            return true
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            mHandler.close()
+        }
+
+        return false
     }
 
-    fun save(context: Context): Boolean {
-        return DatabaseHandler.updateUser(context, this)
+    fun save(context: Context) : Boolean {
+        val mHandler = DatabaseHandler.open(context)
+        try {
+            val sql = """
+                    UPDATE USER_TB SET 
+                    nickname="${nickname}",
+                    birthday="${SDF.dateBar.format(birthday)}",
+                    email="${email}"
+                    WHERE id=${id}
+                """.trimIndent()
+
+            mHandler.write(sql)
+            return true
+        } catch (e: Exception) {
+            e.printStackTrace()
+        } finally {
+            mHandler.close()
+        }
+
+        return false
     }
 }
