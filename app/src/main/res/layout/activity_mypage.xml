@@ -21,6 +21,7 @@
             android:layout_gravity="center" />
 
         <ImageView
+            android:id="@+id/btn_back"
             android:layout_width="@dimen/medium_icon"
             android:layout_height="@dimen/medium_icon"
             android:src="@drawable/back_arrow"
@@ -49,6 +50,7 @@
             android:orientation="vertical">
             
             <TextView
+                android:id="@+id/btn_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_profile"
@@ -58,6 +60,7 @@
                 android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
+                android:id="@+id/btn_bookmark"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_bookmark"
@@ -67,6 +70,7 @@
                 android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
+                android:id="@+id/btn_review"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_review"
@@ -76,6 +80,7 @@
                 android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
+                android:id="@+id/btn_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/settings"
@@ -85,6 +90,7 @@
                 android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
+                android:id="@+id/btn_service"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/service"

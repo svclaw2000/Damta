@@ -43,17 +43,26 @@
     <dimen name="main_search_padding_horizontal">15dp</dimen>
     <dimen name="main_search_text">16sp</dimen>
     <dimen name="main_gps_icon">100dp</dimen>
+    <dimen name="main_banner_margin">50dp</dimen>
+    <dimen name="main_banner_close_margin">20dp</dimen>
+    <dimen name="main_banner_close">15dp</dimen>
 
-    <dimen name="place_checkbox_text">18sp</dimen>
-    <dimen name="place_checkbox_margin_vertical">5dp</dimen>
-    <dimen name="place_checkbox_margin">25dp</dimen>
-    <dimen name="place_popup_margin_horizontal">40dp</dimen>
-    <dimen name="place_decision_text">15sp</dimen>
-    <dimen name="place_decision_padding_vertical">5dp</dimen>
-    <dimen name="place_information_title_text">13sp</dimen>
-    <dimen name="place_information_text">12sp</dimen>
-    <dimen name="place_information_title_margin_end">5dp</dimen>
-    <dimen name="place_information_margin_vertical">10dp</dimen>
+    <dimen name="main_place_btn_margin_vertical">15dp</dimen>
+
+    <dimen name="search_clear_btn">15dp</dimen>
+    <dimen name="search_content_text">12sp</dimen>
+    <dimen name="search_margin">20dp</dimen>
+
+    <dimen name="area_checkbox_text">18sp</dimen>
+    <dimen name="area_checkbox_margin_vertical">5dp</dimen>
+    <dimen name="area_checkbox_margin">25dp</dimen>
+    <dimen name="area_popup_margin_horizontal">40dp</dimen>
+    <dimen name="area_decision_text">15sp</dimen>
+    <dimen name="area_decision_padding_vertical">5dp</dimen>
+    <dimen name="area_information_title_text">13sp</dimen>
+    <dimen name="area_information_text">12sp</dimen>
+    <dimen name="area_information_title_margin_end">5dp</dimen>
+    <dimen name="area_information_margin_vertical">10dp</dimen>
 
     <dimen name="detail_more_review_text">15sp</dimen>
     <dimen name="detail_more_review_padding">10dp</dimen>
@@ -78,6 +87,7 @@
     <dimen name="detail_subtitle_margin_top">10dp</dimen>
     <dimen name="detail_related_facility_text">12sp</dimen>
     <dimen name="detail_subcontent_margin">20dp</dimen>
+    <dimen name="detail_more_photo_text">12sp</dimen>
 
     <dimen name="new_review_topbar_padding_vertical">20dp</dimen>
     <dimen name="new_review_topbar_padding_horizontal">20dp</dimen>
@@ -95,12 +105,13 @@
     <dimen name="review_padding_vertical">10dp</dimen>
     <dimen name="review_content_margin_top">5dp</dimen>
 
-    <dimen name="register_place_question_text">15sp</dimen>
-    <dimen name="register_place_question_margin">20dp</dimen>
-    <dimen name="register_place_question_margin_top">30dp</dimen>
-    <dimen name="register_place_answer_padding">5dp</dimen>
-    <dimen name="register_place_check_standard_text">14sp</dimen>
-    <dimen name="register_place_check_standard_margin_vertical">20dp</dimen>
+    <dimen name="register_area_question_text">15sp</dimen>
+    <dimen name="register_area_question_margin">20dp</dimen>
+    <dimen name="register_area_question_margin_top">30dp</dimen>
+    <dimen name="register_area_answer_padding_horizontal">8dp</dimen>
+    <dimen name="register_area_answer_padding_vertical">2dp</dimen>
+    <dimen name="register_area_check_standard_text">14sp</dimen>
+    <dimen name="register_area_check_standard_margin_vertical">20dp</dimen>
 
     <dimen name="register_checkbox_margin_vertical">10dp</dimen>
     <dimen name="register_checkbox_margin_horizontal">20dp</dimen>
@@ -171,4 +182,9 @@
     <dimen name="service_box_padding">15dp</dimen>
     <dimen name="service_box_margin_top">20dp</dimen>
     <dimen name="service_submit_margin_vertical">30dp</dimen>
+
+    <dimen name="photo_margin">5dp</dimen>
+    <dimen name="photo_height">120dp</dimen>
+    <dimen name="more_photo_width">150dp</dimen>
+    <dimen name="more_photo_height">130dp</dimen>
 </resources>

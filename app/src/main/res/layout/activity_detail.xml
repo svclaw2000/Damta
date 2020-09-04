@@ -1,454 +1,509 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/topbar_padding_horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_gravity="bottom|center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="국가 흡연부스 (폐쇄형)"
-                android:textColor="@color/dark"
-                android:textSize="@dimen/detail_type_text"
-                android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:text="을지로 입구역 8번출구"
-                android:textColor="@color/dark"
-                android:textSize="@dimen/detail_name_text"
-                android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="@dimen/medium_icon"
-            android:layout_height="@dimen/medium_icon"
-            android:src="@drawable/back_arrow"
-            android:layout_gravity="bottom|start"
-            android:layout_marginTop="@dimen/back_margin" />
-
-        <CheckBox
-            android:layout_width="@dimen/detail_bookmark_width"
-            android:layout_height="@dimen/detail_bookmark_height"
-            android:background="@drawable/bookmark"
-            android:button="@color/invisible"
-            android:layout_gravity="center|end"/>
-    </FrameLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" >
-
-        <LinearLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:paddingHorizontal="@dimen/topbar_padding_horizontal">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                tools:text="서울 특별시 중구 을지로 1가"
-                android:textColor="@color/gray"
-                android:textSize="@dimen/detail_address_text"
-                android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                android:layout_marginVertical="@dimen/detail_address_margin_vertical"
-                android:layout_gravity="center" />
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_gravity="bottom|center">
+
+                <TextView
+                    android:id="@+id/tv_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="국가 흡연부스 (폐쇄형)"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/detail_type_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="을지로 입구역 8번출구"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/detail_name_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btn_back"
+                android:layout_width="@dimen/medium_icon"
+                android:layout_height="@dimen/medium_icon"
+                android:src="@drawable/back_arrow"
+                android:layout_gravity="bottom|start"
+                android:layout_marginTop="@dimen/back_margin" />
+
+            <CheckBox
+                android:id="@+id/cb_bookmark"
+                android:layout_width="@dimen/detail_bookmark_width"
+                android:layout_height="@dimen/detail_bookmark_height"
+                android:background="@drawable/bookmark"
+                android:button="@color/invisible"
+                android:layout_gravity="center|end"/>
+        </FrameLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:orientation="vertical">
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tv_address"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <CheckBox
-                        android:layout_width="@dimen/medium_icon"
-                        android:layout_height="@dimen/medium_icon"
-                        android:background="@drawable/thumb"
-                        android:button="@color/invisible" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        tools:text="21"
-                        android:textColor="@color/dark"
-                        android:textSize="@dimen/detail_thumb_text"
-                        android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
+                    tools:text="서울 특별시 중구 을지로 1가"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/detail_address_text"
+                    android:fontFamily="@font/noto_sans_cjk_kr_regular"
+                    android:layout_marginVertical="@dimen/detail_address_margin_vertical"
+                    android:layout_gravity="center" />
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
+                    android:orientation="horizontal"
                     android:gravity="center">
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal">
+                        android:orientation="vertical"
+                        android:gravity="center">
 
                         <CheckBox
-                            android:layout_width="@dimen/detail_density_width"
-                            android:layout_height="@dimen/detail_density_height"
-                            android:background="@drawable/density"
+                            android:id="@+id/cb_thumb"
+                            android:layout_width="@dimen/medium_icon"
+                            android:layout_height="@dimen/medium_icon"
+                            android:background="@drawable/thumb"
                             android:button="@color/invisible" />
 
-                        <CheckBox
-                            android:layout_width="@dimen/detail_density_width"
-                            android:layout_height="@dimen/detail_density_height"
-                            android:background="@drawable/density"
-                            android:button="@color/invisible" />
-
-                        <CheckBox
-                            android:layout_width="@dimen/detail_density_width"
-                            android:layout_height="@dimen/detail_density_height"
-                            android:background="@drawable/density"
-                            android:button="@color/invisible" />
-
-                        <CheckBox
-                            android:layout_width="@dimen/detail_density_width"
-                            android:layout_height="@dimen/detail_density_height"
-                            android:background="@drawable/density"
-                            android:button="@color/invisible" />
-
-                        <CheckBox
-                            android:layout_width="@dimen/detail_density_width"
-                            android:layout_height="@dimen/detail_density_height"
-                            android:background="@drawable/density"
-                            android:button="@color/invisible" />
+                        <TextView
+                            android:id="@+id/tv_thumb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="21"
+                            android:textColor="@color/dark"
+                            android:textSize="@dimen/detail_thumb_text"
+                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
                     </LinearLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:orientation="horizontal" >
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <CheckBox
+                                android:id="@+id/cb_density_1"
+                                android:layout_width="@dimen/detail_density_width"
+                                android:layout_height="@dimen/detail_density_height"
+                                android:background="@drawable/density"
+                                android:enabled="false"
+                                android:button="@color/invisible" />
+
+                            <CheckBox
+                                android:id="@+id/cb_density_2"
+                                android:layout_width="@dimen/detail_density_width"
+                                android:layout_height="@dimen/detail_density_height"
+                                android:background="@drawable/density"
+                                android:enabled="false"
+                                android:button="@color/invisible" />
+
+                            <CheckBox
+                                android:id="@+id/cb_density_3"
+                                android:layout_width="@dimen/detail_density_width"
+                                android:layout_height="@dimen/detail_density_height"
+                                android:background="@drawable/density"
+                                android:enabled="false"
+                                android:button="@color/invisible" />
+
+                            <CheckBox
+                                android:id="@+id/cb_density_4"
+                                android:layout_width="@dimen/detail_density_width"
+                                android:layout_height="@dimen/detail_density_height"
+                                android:background="@drawable/density"
+                                android:enabled="false"
+                                android:button="@color/invisible" />
+
+                            <CheckBox
+                                android:id="@+id/cb_density_5"
+                                android:layout_width="@dimen/detail_density_width"
+                                android:layout_height="@dimen/detail_density_height"
+                                android:background="@drawable/density"
+                                android:enabled="false"
+                                android:button="@color/invisible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/density_low"
+                                android:textColor="@color/dark"
+                                android:textSize="@dimen/detail_density_text"
+                                android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/density_medium"
+                                android:textColor="@color/dark"
+                                android:textSize="@dimen/detail_density_text"
+                                android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+
+                            <Space
+                                android:layout_width="0dp"
+                                android:layout_height="0dp"
+                                android:layout_weight="1"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="@string/density_high"
+                                android:textColor="@color/dark"
+                                android:textSize="@dimen/detail_density_text"
+                                android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingHorizontal="@dimen/detail_btn_space"
+                    android:layout_marginVertical="@dimen/detail_btn_margin_vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btn_navigate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/btn_detail"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/detail_btn_padding_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/small_icon"
+                            android:layout_height="@dimen/small_icon"
+                            android:src="@drawable/navigation"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/density_low"
-                            android:textColor="@color/dark"
-                            android:textSize="@dimen/detail_density_text"
-                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                            android:text="@string/detail_navigation"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/detail_btn_text"
+                            android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                            android:layout_marginStart="@dimen/detail_btn_text_space" />
+                    </LinearLayout>
 
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"/>
+                    <Space
+                        android:layout_width="@dimen/detail_btn_space"
+                        android:layout_height="0dp" />
+
+                    <LinearLayout
+                        android:id="@+id/btn_share"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal"
+                        android:background="@drawable/btn_detail"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/detail_btn_padding_vertical">
+
+                        <ImageView
+                            android:layout_width="@dimen/small_icon"
+                            android:layout_height="@dimen/small_icon"
+                            android:src="@drawable/share"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/density_medium"
-                            android:textColor="@color/dark"
-                            android:textSize="@dimen/detail_density_text"
-                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-
-                        <Space
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"
-                            android:layout_weight="1"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:text="@string/density_high"
-                            android:textColor="@color/dark"
-                            android:textSize="@dimen/detail_density_text"
-                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                            android:text="@string/detail_share"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/detail_btn_text"
+                            android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                            android:layout_marginStart="@dimen/detail_btn_text_space"  />
                     </LinearLayout>
                 </LinearLayout>
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingHorizontal="@dimen/detail_btn_space"
-                android:layout_marginVertical="@dimen/detail_btn_margin_vertical">
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:background="@drawable/btn_detail"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/detail_btn_padding_vertical">
-
-                    <ImageView
-                        android:layout_width="@dimen/small_icon"
-                        android:layout_height="@dimen/small_icon"
-                        android:src="@drawable/navigation"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/detail_navigation"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/detail_btn_text"
-                        android:fontFamily="@font/noto_sans_cjk_kr_medium"
-                        android:layout_marginStart="@dimen/detail_btn_text_space" />
-                </LinearLayout>
-
-                <Space
-                    android:layout_width="@dimen/detail_btn_space"
-                    android:layout_height="0dp" />
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="horizontal"
-                    android:background="@drawable/btn_detail"
-                    android:gravity="center"
-                    android:paddingVertical="@dimen/detail_btn_padding_vertical">
-
-                    <ImageView
-                        android:layout_width="@dimen/small_icon"
-                        android:layout_height="@dimen/small_icon"
-                        android:src="@drawable/share"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/detail_share"
-                        android:textColor="@android:color/white"
-                        android:textSize="@dimen/detail_btn_text"
-                        android:fontFamily="@font/noto_sans_cjk_kr_medium"
-                        android:layout_marginStart="@dimen/detail_btn_text_space"  />
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                style="@style/SplitLineHorizontal"
-                android:background="@color/half_dark"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/related_facility"
-                android:textSize="@dimen/detail_subtitle_text"
-                android:textColor="@color/dark"
-                android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                android:layout_marginHorizontal="@dimen/detail_subcontent_margin"
-                android:layout_marginTop="@dimen/detail_subtitle_margin_top"/>
-            
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_margin="@dimen/detail_subcontent_margin" >
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <CheckBox
-                        android:layout_width="@dimen/large_icon"
-                        android:layout_height="@dimen/large_icon"
-                        android:background="@drawable/ashtray"
-                        android:button="@color/invisible" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/ashtray"
-                        android:textColor="@color/quarter_dark"
-                        android:textSize="@dimen/detail_related_facility_text"
-                        android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <CheckBox
-                        android:layout_width="@dimen/large_icon"
-                        android:layout_height="@dimen/large_icon"
-                        android:background="@drawable/vent"
-                        android:button="@color/invisible" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/vent"
-                        android:textColor="@color/quarter_dark"
-                        android:textSize="@dimen/detail_related_facility_text"
-                        android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <CheckBox
-                        android:layout_width="@dimen/large_icon"
-                        android:layout_height="@dimen/large_icon"
-                        android:background="@drawable/bench"
-                        android:button="@color/invisible" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/bench"
-                        android:textColor="@color/quarter_dark"
-                        android:textSize="@dimen/detail_related_facility_text"
-                        android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical"
-                    android:gravity="center">
-
-                    <CheckBox
-                        android:layout_width="@dimen/large_icon"
-                        android:layout_height="@dimen/large_icon"
-                        android:background="@drawable/machine"
-                        android:button="@color/invisible" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="@string/machine"
-                        android:textColor="@color/quarter_dark"
-                        android:textSize="@dimen/detail_related_facility_text"
-                        android:fontFamily="@font/noto_sans_cjk_kr_bold" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <View
-                style="@style/SplitLineHorizontal"
-                android:background="@color/half_dark"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/photo"
-                android:textSize="@dimen/detail_subtitle_text"
-                android:textColor="@color/dark"
-                android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                android:layout_marginHorizontal="@dimen/detail_subcontent_margin"
-                android:layout_marginTop="@dimen/detail_subtitle_margin_top"/>
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/detail_subcontent_margin"/>
-
-            <View
-                style="@style/SplitLineHorizontal"
-                android:background="@color/half_dark"/>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="@dimen/detail_subtitle_margin_top"
-                android:layout_marginHorizontal="@dimen/detail_subcontent_margin"
-                android:gravity="center">
+                <View
+                    style="@style/SplitLineHorizontal"
+                    android:background="@color/half_dark"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/review"
+                    android:text="@string/related_facility"
                     android:textSize="@dimen/detail_subtitle_text"
                     android:textColor="@color/dark"
-                    android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"
+                    android:layout_marginHorizontal="@dimen/detail_subcontent_margin"
+                    android:layout_marginTop="@dimen/detail_subtitle_margin_top"/>
 
-                <Space
-                    android:layout_width="0dp"
-                    android:layout_height="0dp"
-                    android:layout_weight="1" />
-                
-                <ImageView
-                    android:layout_width="@dimen/small_icon"
-                    android:layout_height="@dimen/small_icon"
-                    android:src="@drawable/pencil_white"
-                    android:background="@drawable/btn_highlight"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="@dimen/detail_subcontent_margin" >
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cb_ashtray"
+                            android:layout_width="@dimen/large_icon"
+                            android:layout_height="@dimen/large_icon"
+                            android:background="@drawable/ashtray"
+                            android:enabled="false"
+                            android:button="@color/invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_ashtray"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ashtray"
+                            android:textColor="@color/quarter_dark"
+                            android:textSize="@dimen/detail_related_facility_text"
+                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cb_vent"
+                            android:layout_width="@dimen/large_icon"
+                            android:layout_height="@dimen/large_icon"
+                            android:background="@drawable/vent"
+                            android:enabled="false"
+                            android:button="@color/invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_vent"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vent"
+                            android:textColor="@color/quarter_dark"
+                            android:textSize="@dimen/detail_related_facility_text"
+                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cb_bench"
+                            android:layout_width="@dimen/large_icon"
+                            android:layout_height="@dimen/large_icon"
+                            android:background="@drawable/bench"
+                            android:enabled="false"
+                            android:button="@color/invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_bench"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bench"
+                            android:textColor="@color/quarter_dark"
+                            android:textSize="@dimen/detail_related_facility_text"
+                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <CheckBox
+                            android:id="@+id/cb_machine"
+                            android:layout_width="@dimen/large_icon"
+                            android:layout_height="@dimen/large_icon"
+                            android:background="@drawable/machine"
+                            android:enabled="false"
+                            android:button="@color/invisible" />
+
+                        <TextView
+                            android:id="@+id/tv_machine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/machine"
+                            android:textColor="@color/quarter_dark"
+                            android:textSize="@dimen/detail_related_facility_text"
+                            android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    style="@style/SplitLineHorizontal"
+                    android:background="@color/half_dark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/photo"
+                    android:textSize="@dimen/detail_subtitle_text"
+                    android:textColor="@color/dark"
+                    android:fontFamily="@font/noto_sans_cjk_kr_bold"
+                    android:layout_marginHorizontal="@dimen/detail_subcontent_margin"
+                    android:layout_marginTop="@dimen/detail_subtitle_margin_top"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/photo_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/detail_subcontent_margin"/>
+
+                <View
+                    style="@style/SplitLineHorizontal"
+                    android:background="@color/half_dark"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/detail_subtitle_margin_top"
+                    android:layout_marginHorizontal="@dimen/detail_subcontent_margin"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/review"
+                        android:textSize="@dimen/detail_subtitle_text"
+                        android:textColor="@color/dark"
+                        android:fontFamily="@font/noto_sans_cjk_kr_bold" />
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1" />
+
+                    <ImageView
+                        android:id="@+id/btn_write_review"
+                        android:layout_width="@dimen/small_icon"
+                        android:layout_height="@dimen/small_icon"
+                        android:src="@drawable/pencil_white"
+                        android:background="@drawable/btn_highlight"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/review_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="@dimen/detail_subcontent_margin"/>
             </LinearLayout>
+        </ScrollView>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
+        <LinearLayout
+            android:id="@+id/btn_more_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/dark"
+            android:gravity="center"
+            android:padding="@dimen/detail_more_review_padding">
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginVertical="@dimen/detail_subcontent_margin"/>
+                android:text="@string/more_review"
+                android:textSize="@dimen/detail_more_review_text"
+                android:fontFamily="@font/noto_sans_cjk_kr_medium"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="@dimen/detail_more_review_space"/>
+
+            <ImageView
+                android:layout_width="@dimen/small_icon"
+                android:layout_height="@dimen/small_icon"
+                android:src="@drawable/arrow_right"/>
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/view_banner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/dark"
-        android:gravity="center"
-        android:padding="@dimen/detail_more_review_padding">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/more_review"
-            android:textSize="@dimen/detail_more_review_text"
-            android:fontFamily="@font/noto_sans_cjk_kr_medium"
-            android:textColor="@android:color/white"
-            android:layout_marginEnd="@dimen/detail_more_review_space"/>
+        android:layout_height="match_parent"
+        android:background="@color/shadowed"
+        android:gravity="center" >
 
         <ImageView
-            android:layout_width="@dimen/small_icon"
-            android:layout_height="@dimen/small_icon"
-            android:src="@drawable/arrow_right"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/banner"
+            android:adjustViewBounds="true"
+            android:layout_margin="@dimen/main_banner_margin"/>
     </LinearLayout>
-</LinearLayout>
+</FrameLayout>

@@ -4,6 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -12,23 +17,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true">
-        <activity android:name=".NewReviewActivity"></activity>
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true">
+
+        <activity android:name=".SearchActivity" />
+        <activity android:name=".NewReviewActivity" />
         <activity android:name=".ServiceActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ReviewActivity" />
         <activity android:name=".BookmarkActivity" />
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MypageActivity" />
-        <activity android:name=".RegisterPlaceActivity7" />
-        <activity android:name=".RegisterPlaceActivity6" />
-        <activity android:name=".RegisterPlaceActivity5" />
-        <activity android:name=".RegisterPlaceActivity4" />
-        <activity android:name=".RegisterPlaceActivity3" />
-        <activity android:name=".RegisterPlaceActivity2" />
-        <activity android:name=".RegisterPlaceActivity1" />
-        <activity android:name=".CheckPlaceStandardActivity" />
-        <activity android:name=".RegisterPlaceActivity" />
+        <activity android:name=".RegisterAreaActivityThank" />
+        <activity android:name=".CheckAreaStandardActivity" />
+        <activity android:name=".RegisterAreaWarningActivity" />
         <activity android:name=".MorePhotoActivity" />
         <activity android:name=".MoreReviewActivity" />
         <activity android:name=".DetailActivity" />
@@ -47,6 +50,17 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-    </application>
+        <activity android:name=".RegisterAreaActivity" />
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.khnsoft.damta.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
 </manifest>

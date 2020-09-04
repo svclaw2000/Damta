@@ -15,6 +15,7 @@
         android:layout_marginHorizontal="@dimen/review_title_margin_horizontal">
 
         <TextView
+            android:id="@+id/tv_nickname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="구파발발이(dksjqos23)"
@@ -28,6 +29,7 @@
             android:layout_weight="1"/>
 
         <TextView
+            android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="(2020.03.29)"
@@ -37,6 +39,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_review"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="다른 데보다 여기가 확실히 깨끗해요 …!\n근데 좀 사람이 많아서 시끄럽다는 점 그게 아쉽긴 해요 "

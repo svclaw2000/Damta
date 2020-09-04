@@ -38,6 +38,7 @@
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
         android:textSize="@dimen/register_text"
         android:textColor="@color/dark"
+        android:inputType="text"
         android:paddingHorizontal="@dimen/input_padding_horizontal"/>
 
     <Space

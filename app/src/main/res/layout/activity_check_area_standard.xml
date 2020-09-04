@@ -15,6 +15,7 @@
         android:layout_marginHorizontal="@dimen/topbar_padding_horizontal" />
 
     <TextView
+        android:id="@+id/tv_standard_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register_standard"
@@ -32,8 +33,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -201,6 +200,7 @@
     </ScrollView>
 
     <TextView
+        android:id="@+id/btn_finish"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/dark"
@@ -209,6 +209,5 @@
         android:textSize="@dimen/detail_more_review_text"
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
         android:textColor="@android:color/white"
-        android:layout_marginEnd="@dimen/detail_more_review_space"
         android:padding="@dimen/detail_more_review_padding" />
 </LinearLayout>

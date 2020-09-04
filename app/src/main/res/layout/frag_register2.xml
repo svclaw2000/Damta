@@ -7,14 +7,18 @@
     android:orientation="vertical"
     android:paddingHorizontal="@dimen/register_content_padding_horizontal">
 
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="4"/>
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/register_title"
         android:fontFamily="@font/noto_sans_cjk_kr_black"
         android:textSize="@dimen/register_title_text"
-        android:textColor="@color/dark"
-        android:layout_marginTop="@dimen/register_title_margin_top"/>
+        android:textColor="@color/dark"/>
 
     <Space
         android:layout_width="0dp"
@@ -36,6 +40,8 @@
         android:backgroundTint="@color/dark"
         android:paddingHorizontal="@dimen/input_padding_horizontal"
         tools:text="유정"
+        android:inputType="text"
+        android:nextFocusForward="@id/et_email"
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
         android:textSize="@dimen/register_text"
         android:textColor="@color/dark"/>

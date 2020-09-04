@@ -28,9 +28,11 @@
     <string name="warning_age">20세 이상의 성인만 회원가입이 가능합니다.</string>
     <string name="warning_login_failed">아이디가 존재하지 않거나 비밀번호가 틀렸습니다.</string>
 
-    <string name="place_type_opened">개방형</string>
-    <string name="place_type_closed">폐쇄형</string>
-    <string name="place_type_fullyclosed">완전폐쇄형</string>
+    <string name="search_hint">검색어를 입력하세요</string>
+
+    <string name="area_type_opened">개방형</string>
+    <string name="area_type_closed">폐쇄형</string>
+    <string name="area_type_fullyclosed">완전폐쇄형</string>
 
     <string name="information_title_opened">*개방형</string>
     <string name="information_opened">벽면의 전부 또는 일부를 개방해 공기의 자연이동을 이용한 환기</string>
@@ -63,11 +65,14 @@
     <string name="photo">사진</string>
     <string name="review">리뷰</string>
 
+    <string name="radius">반경</string>
+    <string name="inside">이내</string>
+
     <string name="new_review">방문자 리뷰 글쓰기</string>
     <string name="new_review_hint">: 방문 평을 남겨주세요 !</string>
     <string name="new_review_density">%s에 방문하신\n\"%s\"의\n밀집도를 기록해주세요!</string>
 
-    <string name="register_place">흡연구역 등록요청</string>
+    <string name="register_area">흡연구역 등록요청</string>
     <string name="question_1">보행자 주 통행로에서 20미터 이상 떨어져 있습니까?</string>
     <string name="question_2">화기성 물질로부터 안전한 거리가 확보되어 있습니까?</string>
     <string name="question_3">다른 실외 흡연구역으로 부터 500m 떨어져 있습니까?</string>
@@ -75,8 +80,10 @@
     <string name="question_no">아니오</string>
     <string name="question_idk">잘 모르겠음</string>
     <string name="check_register_standard"><u>실외 흡연구역 지정 권고 기준 확인하기</u></string>
+    <string name="check_all_questions">모든 질문에 답해주세요</string>
 
     <string name="register_standard">실외 흡연구역 지정 권고 기준</string>
+    <string name="register_standard_warning">실외 흡연구역 지정 권고 기준에 적합한 공간만이 흡연 구역이 될 수 있습니다</string>
     <string name="number_1">1</string>
     <string name="number_2">2</string>
     <string name="number_3">3</string>
@@ -106,12 +113,13 @@
     <string name="number_point_5">5.</string>
     <string name="number_point_6">6.</string>
 
-    <string name="place_name">이름</string>
-    <string name="place_address">주소(상세주소)</string>
+    <string name="area_name">이름</string>
+    <string name="area_address">주소(상세주소)</string>
 
     <string name="mypage">마이 페이지</string>
     <string name="my_profile">계정 정보</string>
     <string name="edit_profile">프로필 수정</string>
+    <string name="edit_profile2">수정 완료</string>
     <string name="my_bookmark">즐겨찾기 모음</string>
     <string name="my_review">내가 쓴 글</string>
     <string name="settings">환경설정</string>

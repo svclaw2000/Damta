@@ -23,6 +23,8 @@ class Area(
     var createdDate: Date? = null
 ) {
     companion object {
+        const val EXTRA_AREA_ID = "id"
+
         fun getFromJson(jArea: JsonObject) : Area {
             return Area(
                 id = jArea["id"].asInt,

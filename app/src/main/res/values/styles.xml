@@ -14,10 +14,10 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:button">@null</item>
         <item name="android:drawableRight">?android:attr/listChoiceIndicatorSingle</item>
-        <item name="android:textSize">@dimen/place_checkbox_text</item>
+        <item name="android:textSize">@dimen/area_checkbox_text</item>
         <item name="android:fontFamily">@font/noto_sans_cjk_kr_bold</item>
         <item name="android:textColor">@color/dark</item>
-        <item name="android:layout_marginVertical">@dimen/place_checkbox_margin_vertical</item>
+        <item name="android:layout_marginVertical">@dimen/area_checkbox_margin_vertical</item>
     </style>
 
     <style name="RegisterPlaceCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
@@ -25,10 +25,21 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:button">@null</item>
         <item name="android:drawableLeft">?android:attr/listChoiceIndicatorSingle</item>
-        <item name="android:textSize">@dimen/place_checkbox_text</item>
+        <item name="android:textSize">@dimen/area_checkbox_text</item>
         <item name="android:fontFamily">@font/noto_sans_cjk_kr_medium</item>
-        <item name="android:textColor">@color/dark</item>
         <item name="android:layout_marginVertical">@dimen/register_checkbox_margin_vertical</item>
+    </style>
+
+    <style name="RegisterPlaceQuestion" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/btn_question</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/register_area_question_text</item>
+        <item name="android:fontFamily">@font/noto_sans_cjk_kr_medium</item>
+        <item name="android:paddingHorizontal">@dimen/register_area_answer_padding_horizontal</item>
+        <item name="android:paddingVertical">@dimen/register_area_answer_padding_vertical</item>
+        <item name="android:textColor">@color/text_question</item>
     </style>
 
     <style name="SplitLineHorizontal">

@@ -5,88 +5,76 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/shadowed"
-    android:gravity="center">
+    android:paddingHorizontal="@dimen/register_content_padding_horizontal">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/number_point_4"
+            android:fontFamily="@font/noto_sans_cjk_kr_bold"
+            android:textSize="@dimen/register_title_text"
+            android:textColor="@color/highlight"
+            android:layout_marginTop="@dimen/register_number_margin_top"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_information_4"
+            android:fontFamily="@font/noto_sans_cjk_kr_bold"
+            android:textSize="@dimen/register_title_text"
+            android:textColor="@color/dark"
+            android:layout_marginTop="@dimen/register_title_margin_top"
+            android:layout_marginStart="@dimen/register_title_margin_start"/>
+    </LinearLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <RadioGroup
+        android:id="@+id/rg_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="@drawable/popup_box"
-        android:layout_marginHorizontal="@dimen/place_popup_margin_horizontal">
+        android:layout_marginHorizontal="@dimen/register_checkbox_margin_horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_opened"
+            style="@style/RegisterPlaceCheckBox"
+            android:text="@string/area_type_opened"/>
+
+        <RadioButton
+            android:id="@+id/rb_closed"
+            style="@style/RegisterPlaceCheckBox"
+            android:text="@string/area_type_closed" />
+
+        <RadioButton
+            android:id="@+id/rb_fullyclosed"
+            style="@style/RegisterPlaceCheckBox"
+            android:text="@string/area_type_fullyclosed" />
+    </RadioGroup>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:layout_margin="@dimen/place_checkbox_margin">
-
-            <CheckBox
-                style="@style/PlaceCheckBox"
-                android:text="@string/place_type_opened" />
-
-            <CheckBox
-                style="@style/PlaceCheckBox"
-                android:text="@string/place_type_closed" />
-
-            <CheckBox
-                style="@style/PlaceCheckBox"
-                android:text="@string/place_type_fullyclosed" />
-        </LinearLayout>
-
-        <View
-            style="@style/SplitLineHorizontal"/>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:text="@string/decision_close"
-                android:textColor="@color/half_dark"
-                android:gravity="center"
-                android:fontFamily="@font/noto_sans_cjk_kr_black"
-                android:textSize="@dimen/place_decision_text"
-                android:paddingVertical="@dimen/place_decision_padding_vertical"/>
-
-            <View
-                style="@style/SplitLineVertical" />
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:layout_gravity="center"
-                android:text="@string/decision_confirm"
-                android:textColor="@color/dark"
-                android:gravity="center"
-                android:fontFamily="@font/noto_sans_cjk_kr_black"
-                android:textSize="@dimen/place_decision_text"
-                android:paddingVertical="@dimen/place_decision_padding_vertical"/>
-        </LinearLayout>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/place_popup_margin_horizontal"
-        android:layout_marginVertical="@dimen/place_information_margin_vertical"
-        android:orientation="horizontal" >
-
-        <ImageView
-            android:layout_width="@dimen/medium_icon"
-            android:layout_height="@dimen/medium_icon"
-            android:src="@drawable/information"/>
-        
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" 
-            android:orientation="vertical">
+            android:background="@drawable/register_information_box"
+            android:padding="20dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -102,8 +90,8 @@
                     android:shadowRadius="5.0"
                     android:shadowColor="@color/shadowed_highlight"
                     android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                    android:textSize="@dimen/place_information_title_text"
-                    android:layout_marginEnd="@dimen/place_information_title_margin_end"/>
+                    android:textSize="@dimen/area_information_title_text"
+                    android:layout_marginEnd="@dimen/area_information_title_margin_end"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -111,7 +99,7 @@
                     android:text="@string/information_opened"
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                    android:textSize="@dimen/place_information_title_text"/>
+                    android:textSize="@dimen/area_information_title_text"/>
             </LinearLayout>
 
             <LinearLayout
@@ -128,8 +116,8 @@
                     android:shadowRadius="5.0"
                     android:shadowColor="@color/shadowed_highlight"
                     android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                    android:textSize="@dimen/place_information_title_text"
-                    android:layout_marginEnd="@dimen/place_information_title_margin_end"/>
+                    android:textSize="@dimen/area_information_title_text"
+                    android:layout_marginEnd="@dimen/area_information_title_margin_end"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -137,7 +125,7 @@
                     android:text="@string/information_closed"
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                    android:textSize="@dimen/place_information_title_text"/>
+                    android:textSize="@dimen/area_information_title_text"/>
             </LinearLayout>
 
             <LinearLayout
@@ -154,8 +142,8 @@
                     android:shadowRadius="5.0"
                     android:shadowColor="@color/shadowed_highlight"
                     android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                    android:textSize="@dimen/place_information_title_text"
-                    android:layout_marginEnd="@dimen/place_information_title_margin_end"/>
+                    android:textSize="@dimen/area_information_title_text"
+                    android:layout_marginEnd="@dimen/area_information_title_margin_end"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -163,8 +151,18 @@
                     android:text="@string/information_fullyclosed"
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                    android:textSize="@dimen/place_information_title_text"/>
+                    android:textSize="@dimen/area_information_title_text"/>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
+
+        <ImageView
+            android:layout_width="@dimen/small_icon"
+            android:layout_height="@dimen/small_icon"
+            android:src="@drawable/information_green"/>
+    </FrameLayout>
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
 </LinearLayout>

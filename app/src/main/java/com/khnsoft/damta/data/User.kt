@@ -129,4 +129,16 @@ class User(
 
         return false
     }
+
+    fun copy() : User {
+        return User(
+            id = id,
+            username = username,
+            password = password,
+            nickname = nickname,
+            birthday = birthday,
+            email = email,
+            createdDate = createdDate
+        )
+    }
 }

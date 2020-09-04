@@ -3,7 +3,7 @@ package com.khnsoft.damta.utils
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.khnsoft.damta.MyLogger
+import com.khnsoft.damta.data.Area
 import java.lang.Exception
 
 class DatabaseOpenHelper(val context: Context?, name: String?, factory: SQLiteDatabase.CursorFactory?, version: Int) :
@@ -14,6 +14,8 @@ class DatabaseOpenHelper(val context: Context?, name: String?, factory: SQLiteDa
         createTableArea(db)
         createTableReview(db)
         createTableBookmark(db)
+        createTableImage(db)
+        createTableThumb(db)
     }
 
     override fun onOpen(db: SQLiteDatabase?) {
@@ -51,9 +53,16 @@ class DatabaseOpenHelper(val context: Context?, name: String?, factory: SQLiteDa
             CREATE TABLE IF NOT EXISTS AREA_TB (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 name TEXT NOT NULL,
+                type TEXT NOT NULL,
                 address TEXT NOT NULL,
                 x REAL NOT NULL,
-                y REAL NOT NULL
+                y REAL NOT NULL,
+                ashtray INTEGER NOT NULL,
+                vent INTEGER NOT NULL,
+                bench INTEGER NOT NULL,
+                machine INTEGER NOT NULL,
+                density REAL NOT NULL,
+                created_date TEXT NOT NULL
             )
         """.trimIndent()
 
@@ -98,6 +107,45 @@ class DatabaseOpenHelper(val context: Context?, name: String?, factory: SQLiteDa
         """.trimIndent()
 
         MyLogger.d("Initialize BOOKMARK_TB", sql)
+
+        try {
+            db.execSQL(sql)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun createTableImage(db: SQLiteDatabase) {
+        val sql = """
+            CREATE TABLE IF NOT EXISTS IMAGE_TB (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL REFERENCES USER_TB(id) ON DELETE CASCADE,
+                area_id INTEGER NOT NULL REFERENCES AREA_TB(id) ON DELETE CASCADE,
+                image TEXT NOT NULL,
+                created_date TEXT NOT NULL
+            )
+        """.trimIndent()
+
+        MyLogger.d("Initialize IMAGE_TB", sql)
+
+        try {
+            db.execSQL(sql)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+    }
+
+    private fun createTableThumb(db: SQLiteDatabase) {
+        val sql = """
+            CREATE TABLE IF NOT EXISTS THUMB_TB (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                user_id INTEGER NOT NULL REFERENCES USER_TB(id) ON DELETE CASCADE,
+                area_id INTEGER NOT NULL REFERENCES AREA_TB(id) ON DELETE CASCADE,
+                created_date TEXT NOT NULL
+            )
+        """.trimIndent()
+
+        MyLogger.d("Initialize THUMB_TB", sql)
 
         try {
             db.execSQL(sql)

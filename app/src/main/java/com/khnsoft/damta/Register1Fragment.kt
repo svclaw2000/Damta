@@ -1,10 +1,13 @@
 package com.khnsoft.damta
 
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import kotlinx.android.synthetic.main.activity_register.*
+import kotlinx.android.synthetic.main.frag_register1.*
 
 class Register1Fragment : Fragment() {
 

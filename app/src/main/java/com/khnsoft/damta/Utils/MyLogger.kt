@@ -1,22 +1,21 @@
-package com.khnsoft.damta
+package com.khnsoft.damta.utils
 
 import android.util.Log
-import com.khnsoft.damta.utils.LogType
 
 class MyLogger {
 	companion object {
 		const val MAX_LEN = 3000
 
 		fun i(tag: String, msg: String) {
-			log(LogType.INFO, tag, msg)
+            log(LogType.INFO, tag, msg)
 		}
 
 		fun e(tag: String, msg: String) {
-			log(LogType.ERROR, tag, msg)
+            log(LogType.ERROR, tag, msg)
 		}
 
 		fun d(tag: String, msg: String) {
-			log(LogType.DEBUG, tag, msg)
+            log(LogType.DEBUG, tag, msg)
 		}
 
 		fun log(type: LogType, tag: String, msg: String) {

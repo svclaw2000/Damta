@@ -72,6 +72,7 @@
                     android:layout_weight="1"
                     android:paddingHorizontal="@dimen/input_padding_horizontal"
                     tools:text="abc123"
+                    android:inputType="text"
                     android:textSize="@dimen/login_text"
                     android:textColor="@android:color/white"
                     android:fontFamily="@font/noto_sans_cjk_kr_medium"

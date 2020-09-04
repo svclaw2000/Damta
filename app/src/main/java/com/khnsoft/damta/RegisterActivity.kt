@@ -2,6 +2,7 @@ package com.khnsoft.damta
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.widget.Toast
 import com.khnsoft.damta.data.User
@@ -12,7 +13,7 @@ import kotlinx.android.synthetic.main.popup_warning.*
 import java.util.*
 
 class RegisterActivity : AppCompatActivity() {
-    var cur_frag = 1
+    var curFrag = 1
     val frag1 = Register1Fragment.getInstance()
     val frag2 = Register2Fragment.getInstance()
 
@@ -28,7 +29,7 @@ class RegisterActivity : AppCompatActivity() {
         setContentView(R.layout.activity_register)
 
         btn_previous.setOnClickListener {
-            when (cur_frag) {
+            when (curFrag) {
                 1 -> {
                     finish()
                 }
@@ -39,7 +40,7 @@ class RegisterActivity : AppCompatActivity() {
         }
 
         btn_next.setOnClickListener {
-            when (cur_frag) {
+            when (curFrag) {
                 1 -> {
                     if (et_username.text.toString().isBlank() || et_password.text.toString().isBlank()) {
                         popupWarning(getString(R.string.warning_empty_field))
@@ -107,6 +108,6 @@ class RegisterActivity : AppCompatActivity() {
             }
         }
 
-        cur_frag = idx
+        curFrag = idx
     }
 }

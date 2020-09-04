@@ -21,6 +21,7 @@
             android:layout_gravity="center" />
 
         <ImageView
+            android:id="@+id/btn_back"
             android:layout_width="@dimen/medium_icon"
             android:layout_height="@dimen/medium_icon"
             android:src="@drawable/back_arrow"
@@ -29,6 +30,7 @@
     </FrameLayout>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/photo_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
