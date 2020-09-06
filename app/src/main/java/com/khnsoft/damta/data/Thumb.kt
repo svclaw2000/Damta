@@ -2,6 +2,7 @@ package com.khnsoft.damta.data
 
 import android.content.Context
 import com.khnsoft.damta.utils.DatabaseHandler
+import com.khnsoft.damta.utils.MyLogger
 import com.khnsoft.damta.utils.SDF
 import java.lang.Exception
 import java.util.*
@@ -66,6 +67,7 @@ class Thumb(
         }
 
         fun add(context: Context, user: User, area: Area) : Boolean {
+            MyLogger.d("@@@", "Add Thumb")
             return Thumb(
                 user = user,
                 area = area,

@@ -52,13 +52,18 @@ class NewReviewActivity : AppCompatActivity() {
                     if (et_review.text.toString().isBlank()) {
                         Toast.makeText(this@NewReviewActivity, getString(R.string.warning_empty_field), Toast.LENGTH_LONG).show()
                     } else {
+                        btn_next.text = getString(R.string.finish)
+                        btn_next.setTextColor(R.color.highlight)
                         curReview.review = et_review.text.toString()
+                        callPage(curFrag + 1)
                     }
                 }
                 2 -> {
                     if (!cb_density_1.isChecked) {
                         Toast.makeText(this@NewReviewActivity, getString(R.string.warning_empty_field), Toast.LENGTH_LONG).show()
                     } else {
+                        btn_next.text = getString(R.string.next)
+                        btn_next.setTextColor(R.color.dark)
                         curReview.density = frag2.density
                         if (curReview.add(this@NewReviewActivity)) {
                             finish()

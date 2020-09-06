@@ -15,6 +15,8 @@ import com.khnsoft.damta.utils.SDF
 import kotlinx.android.synthetic.main.activity_more_review.*
 
 class MoreReviewActivity : AppCompatActivity() {
+    var area : Area? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_more_review)
@@ -23,24 +25,32 @@ class MoreReviewActivity : AppCompatActivity() {
             finish()
         }
 
-        val area = Area.getById(this@MoreReviewActivity, intent.getIntExtra(Area.EXTRA_AREA_ID, -1))
+        area = Area.getById(this@MoreReviewActivity, intent.getIntExtra(Area.EXTRA_AREA_ID, -1))
+        val area = area
         if (area == null) {
             finish()
             return
         }
-
-        val lReview = Review.getByArea(this@MoreReviewActivity, area)
-
-        val adapter = ReviewRecyclerAdapter(lReview)
-        val lm = LinearLayoutManager(this@MoreReviewActivity)
-        review_container.layoutManager = lm
-        review_container.adapter = adapter
 
         btn_write_review.setOnClickListener {
             val intent = Intent(this@MoreReviewActivity, NewReviewActivity::class.java)
             intent.putExtra(Area.EXTRA_AREA_ID, area.id)
             startActivity(intent)
         }
+    }
+
+    private fun refreshReview() {
+        val lReview = Review.getByArea(this@MoreReviewActivity, area ?: return)
+
+        val adapter = ReviewRecyclerAdapter(lReview)
+        val lm = LinearLayoutManager(this@MoreReviewActivity)
+        review_container.layoutManager = lm
+        review_container.adapter = adapter
+    }
+
+    override fun onResume() {
+        super.onResume()
+        refreshReview()
     }
 
     inner class ReviewRecyclerAdapter(val lReview: Array<Review>) :

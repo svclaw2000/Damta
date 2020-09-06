@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import com.khnsoft.damta.data.User
+import com.khnsoft.damta.utils.MyLogger
 import com.khnsoft.damta.utils.SharedPreferencesHelper
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_login.popup_warning

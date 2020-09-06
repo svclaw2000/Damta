@@ -13,7 +13,7 @@
       </options>
     </properties>
     <root id="archive" name="Damta.app.apk">
-      <element id="android-final-package" facet="Damta.app/android/Android" />
+      <element id="android-final-package" facet="damta.app/android/Android" />
     </root>
   </artifact>
 </component>

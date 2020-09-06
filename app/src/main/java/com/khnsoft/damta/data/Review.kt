@@ -34,8 +34,8 @@ class Review(
                 val sql = """
                     SELECT id, user_id, area_id, review, density, created_date 
                     FROM REVIEW_TB
-                    ORDER BY created_date DESC
                     WHERE area_id=${id}
+                    ORDER BY created_date DESC
                 """.trimIndent()
 
                 val jResult = mHandler.read(sql)
@@ -91,8 +91,8 @@ class Review(
 
             try {
                 val sql = """
-                    SELECT id, user_id, area_id, created_date 
-                    FROM BOOKMARK_TB
+                    SELECT id, user_id, area_id, review, density, created_date 
+                    FROM REVIEW_TB
                     WHERE user_id=${id}
                 """.trimIndent()
 

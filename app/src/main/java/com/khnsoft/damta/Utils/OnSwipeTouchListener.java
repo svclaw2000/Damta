@@ -59,6 +59,12 @@ public class OnSwipeTouchListener implements OnTouchListener {
             }
             return result;
         }
+
+        @Override
+        public boolean onSingleTapUp(MotionEvent e) {
+            onClick();
+            return true;
+        }
     }
 
     public void onSwipeRight() {
@@ -71,5 +77,8 @@ public class OnSwipeTouchListener implements OnTouchListener {
     }
 
     public void onSwipeBottom() {
+    }
+
+    public void onClick() {
     }
 }

@@ -7,7 +7,21 @@ import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import com.khnsoft.damta.data.User
+import com.khnsoft.damta.utils.SDF
+import kotlinx.android.synthetic.main.frag_new_review2.*
 import kotlinx.android.synthetic.main.frag_register_area5.*
+import kotlinx.android.synthetic.main.frag_register_area5.cb_density_1
+import kotlinx.android.synthetic.main.frag_register_area5.cb_density_2
+import kotlinx.android.synthetic.main.frag_register_area5.cb_density_3
+import kotlinx.android.synthetic.main.frag_register_area5.cb_density_4
+import kotlinx.android.synthetic.main.frag_register_area5.cb_density_5
+import kotlinx.android.synthetic.main.frag_register_area5.v_density_1
+import kotlinx.android.synthetic.main.frag_register_area5.v_density_2
+import kotlinx.android.synthetic.main.frag_register_area5.v_density_3
+import kotlinx.android.synthetic.main.frag_register_area5.v_density_4
+import kotlinx.android.synthetic.main.frag_register_area5.v_density_5
+import java.util.*
 
 class NewReview2Fragment : Fragment() {
     var checkboxArray = arrayOf<CheckBox>()
@@ -32,6 +46,8 @@ class NewReview2Fragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        tv_hello.text = String.format(getString(R.string.new_review_density), SDF.dateWeek.format(Date()), NewReviewActivity.curReview.area?.name)
 
         checkboxArray = arrayOf(cb_density_1, cb_density_2, cb_density_3, cb_density_4, cb_density_5)
         viewArray = arrayOf(v_density_1, v_density_2, v_density_3, v_density_4, v_density_5)

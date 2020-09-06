@@ -22,7 +22,20 @@ import com.khnsoft.damta.data.*
 import com.khnsoft.damta.utils.AreaType
 import com.khnsoft.damta.utils.MyLogger
 import com.khnsoft.damta.utils.OnSwipeTouchListener
+import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.btn_navigate
+import kotlinx.android.synthetic.main.activity_main.cb_bookmark
+import kotlinx.android.synthetic.main.activity_main.cb_density_1
+import kotlinx.android.synthetic.main.activity_main.cb_density_2
+import kotlinx.android.synthetic.main.activity_main.cb_density_3
+import kotlinx.android.synthetic.main.activity_main.cb_density_4
+import kotlinx.android.synthetic.main.activity_main.cb_density_5
+import kotlinx.android.synthetic.main.activity_main.cb_thumb
+import kotlinx.android.synthetic.main.activity_main.tv_address
+import kotlinx.android.synthetic.main.activity_main.tv_name
+import kotlinx.android.synthetic.main.activity_main.tv_thumb
+import kotlinx.android.synthetic.main.activity_main.tv_type
 import net.daum.mf.map.api.MapPOIItem
 import net.daum.mf.map.api.MapPoint
 import net.daum.mf.map.api.MapView
@@ -88,7 +101,6 @@ class MainActivity : AppCompatActivity() {
             refreshArea()
         }
 
-/*
         btn_gps.setOnTouchListener(object : OnSwipeTouchListener(this@MainActivity) {
             override fun onSwipeTop() {
                 view_result.visibility = View.VISIBLE
@@ -98,12 +110,11 @@ class MainActivity : AppCompatActivity() {
                 result_container.layoutManager = lm
                 result_container.adapter = adapter
             }
-        })
-*/
 
-        btn_gps.setOnClickListener {
-            attachLocation()
-        }
+            override fun onClick() {
+                attachLocation()
+            }
+        })
 
         btn_cancel_result.setOnClickListener {
             view_result.visibility = View.GONE
@@ -140,6 +151,11 @@ class MainActivity : AppCompatActivity() {
                 map_view.setMapCenterPoint(MapPoint.mapPointWithGeoCoord(y, x), false)
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        refreshArea()
     }
 
     private val mapViewEventListener = object : MapView.MapViewEventListener {
@@ -231,6 +247,24 @@ class MainActivity : AppCompatActivity() {
             tv_thumb.text = Thumb.getCountByArea(this@MainActivity, area).toString()
             checkDensity(area.density)
 
+            cb_bookmark.setOnCheckedChangeListener { buttonView, isChecked ->
+                if (isChecked) {
+                    Bookmark.add(this@MainActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                } else {
+                    Bookmark.remove(this@MainActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                }
+            }
+
+            cb_thumb.setOnCheckedChangeListener { buttonView, isChecked ->
+                MyLogger.d("@@@", "check ${User.current}")
+                if (isChecked) {
+                    Thumb.add(this@MainActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                } else {
+                    Thumb.remove(this@MainActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                }
+                tv_thumb.text = Thumb.getCountByArea(this@MainActivity, area).toString()
+            }
+
             val reviews = Review.getByArea(this@MainActivity, area)
             if (reviews.size > 0) {
                 tv_review_user_1.text = "${reviews[0].user?.nickname}(${reviews[0].user?.username})"
@@ -258,6 +292,17 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            btn_information.setOnClickListener {
+                when (view_information.visibility) {
+                    View.VISIBLE -> {
+                        view_information.visibility = View.INVISIBLE
+                    }
+                    View.INVISIBLE -> {
+                        view_information.visibility = View.VISIBLE
+                    }
+                }
+            }
+
             view_place.visibility = View.VISIBLE
         }
     }
@@ -276,15 +321,12 @@ class MainActivity : AppCompatActivity() {
         }
 
         override fun onStatusChanged(provider: String?, status: Int, extras: Bundle?) {
-            super.onStatusChanged(provider, status, extras)
         }
 
         override fun onProviderEnabled(provider: String) {
-            super.onProviderEnabled(provider)
         }
 
         override fun onProviderDisabled(provider: String) {
-            super.onProviderDisabled(provider)
         }
     }
 

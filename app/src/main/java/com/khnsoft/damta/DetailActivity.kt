@@ -18,22 +18,11 @@ import com.khnsoft.damta.data.*
 import com.khnsoft.damta.utils.AreaType
 import com.khnsoft.damta.utils.SDF
 import kotlinx.android.synthetic.main.activity_detail.*
-import kotlinx.android.synthetic.main.activity_detail.btn_navigate
-import kotlinx.android.synthetic.main.activity_detail.cb_bookmark
-import kotlinx.android.synthetic.main.activity_detail.cb_density_1
-import kotlinx.android.synthetic.main.activity_detail.cb_density_2
-import kotlinx.android.synthetic.main.activity_detail.cb_density_3
-import kotlinx.android.synthetic.main.activity_detail.cb_density_4
-import kotlinx.android.synthetic.main.activity_detail.cb_density_5
-import kotlinx.android.synthetic.main.activity_detail.cb_thumb
-import kotlinx.android.synthetic.main.activity_detail.tv_address
-import kotlinx.android.synthetic.main.activity_detail.tv_name
-import kotlinx.android.synthetic.main.activity_detail.tv_thumb
-import kotlinx.android.synthetic.main.activity_detail.tv_type
 import java.lang.Exception
 
 class DetailActivity : AppCompatActivity() {
     var checkboxArray = arrayOf<CheckBox>()
+    var area : Area? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +35,8 @@ class DetailActivity : AppCompatActivity() {
 
         checkboxArray = arrayOf(cb_density_1, cb_density_2, cb_density_3, cb_density_4, cb_density_5)
 
-        val area = Area.getById(this@DetailActivity, intent.getIntExtra(Area.EXTRA_AREA_ID, -1))
+        area = Area.getById(this@DetailActivity, intent.getIntExtra(Area.EXTRA_AREA_ID, -1))
+        val area = area
         if (area == null) {
             finish()
             return
@@ -69,6 +59,30 @@ class DetailActivity : AppCompatActivity() {
         cb_thumb.isChecked = Thumb.isThumbed(this@DetailActivity, User.current, area)
         tv_thumb.text = Thumb.getCountByArea(this@DetailActivity, area).toString()
         checkDensity(area.density)
+
+        cb_bookmark.setOnCheckedChangeListener { buttonView, isChecked ->
+            when (isChecked) {
+                true -> {
+                    Bookmark.add(this@DetailActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                }
+                false -> {
+                    Bookmark.remove(this@DetailActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                }
+            }
+        }
+
+        cb_thumb.setOnCheckedChangeListener { buttonView, isChecked ->
+            when (isChecked) {
+                true -> {
+                    Thumb.add(this@DetailActivity, User.current ?: return@setOnCheckedChangeListener, area)
+
+                }
+                false -> {
+                    Thumb.remove(this@DetailActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                }
+            }
+            tv_thumb.text = Thumb.getCountByArea(this@DetailActivity, area).toString()
+        }
 
         btn_navigate.setOnClickListener {
             try {
@@ -115,18 +129,6 @@ class DetailActivity : AppCompatActivity() {
         photo_container.layoutManager = imageLm
         photo_container.adapter = imageAdapter
 
-        val originalReview = Review.getByArea(this@DetailActivity, area)
-        val lReview = if (originalReview.size > 1) {
-            arrayOf(originalReview[0], originalReview[1])
-        } else {
-            originalReview
-        }
-
-        val reviewAdapter = ReviewRecyclerAdapter(lReview)
-        val reviewLm = LinearLayoutManager(this@DetailActivity)
-        review_container.layoutManager = reviewLm
-        review_container.adapter = reviewAdapter
-
         btn_write_review.setOnClickListener {
             val intent = Intent(this@DetailActivity, NewReviewActivity::class.java)
             intent.putExtra(Area.EXTRA_AREA_ID, area.id)
@@ -138,6 +140,25 @@ class DetailActivity : AppCompatActivity() {
             intent.putExtra(Area.EXTRA_AREA_ID, area.id)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        refreshReview()
+    }
+
+    private fun refreshReview() {
+        val originalReview = Review.getByArea(this@DetailActivity, area ?: return)
+        val lReview = if (originalReview.size > 1) {
+            arrayOf(originalReview[0], originalReview[1])
+        } else {
+            originalReview
+        }
+
+        val reviewAdapter = ReviewRecyclerAdapter(lReview)
+        val reviewLm = LinearLayoutManager(this@DetailActivity)
+        review_container.layoutManager = reviewLm
+        review_container.adapter = reviewAdapter
     }
 
     private fun checkDensity(n: Double) {

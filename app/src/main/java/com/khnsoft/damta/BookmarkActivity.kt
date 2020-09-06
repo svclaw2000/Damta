@@ -67,6 +67,29 @@ class BookmarkActivity : AppCompatActivity() {
             holder.thumb.isChecked = Thumb.isThumbed(this@BookmarkActivity, User.current, area)
             holder.thumbCount.text = Thumb.getCountByArea(this@BookmarkActivity, area).toString()
             holder.bookmark.isChecked = Bookmark.isBookmarked(this@BookmarkActivity, User.current, area)
+
+            holder.bookmark.setOnCheckedChangeListener { buttonView, isChecked ->
+                when (isChecked) {
+                    true -> {
+                        Bookmark.add(this@BookmarkActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                    false -> {
+                        Bookmark.remove(this@BookmarkActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                }
+            }
+
+            holder.thumb.setOnCheckedChangeListener { buttonView, isChecked ->
+                when (isChecked) {
+                    true -> {
+                        Thumb.add(this@BookmarkActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                    false -> {
+                        Thumb.remove(this@BookmarkActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                }
+                holder.thumbCount.text = Thumb.getCountByArea(this@BookmarkActivity, area).toString()
+            }
         }
     }
 }

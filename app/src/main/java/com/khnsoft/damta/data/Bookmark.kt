@@ -113,7 +113,7 @@ class Bookmark(
 
         try {
             val sql = """
-                    INSERT INTO THUMB_TB (user_id, area_id, created_date) 
+                    INSERT INTO BOOKMARK_TB (user_id, area_id, created_date) 
                     VALUES (
                         "${user?.id ?: return false}",
                         "${area?.id ?: return false}",

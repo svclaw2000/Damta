@@ -15,7 +15,10 @@ import com.khnsoft.damta.data.Thumb
 import com.khnsoft.damta.data.User
 import com.khnsoft.damta.utils.AreaType
 import com.khnsoft.damta.utils.SDF
+import kotlinx.android.synthetic.main.activity_detail.*
 import kotlinx.android.synthetic.main.activity_review.*
+import kotlinx.android.synthetic.main.activity_review.btn_back
+import kotlinx.android.synthetic.main.activity_review.review_container
 
 class ReviewActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -79,6 +82,29 @@ class ReviewActivity : AppCompatActivity() {
             holder.nickname.text = "${review.user?.nickname}(${review.user?.username})"
             holder.date.text = SDF.dateDot.format(review.createdDate)
             holder.review.text = review.review
+
+            holder.bookmark.setOnCheckedChangeListener { buttonView, isChecked ->
+                when (isChecked) {
+                    true -> {
+                        Bookmark.add(this@ReviewActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                    false -> {
+                        Bookmark.remove(this@ReviewActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                }
+            }
+
+            holder.thumb.setOnCheckedChangeListener { buttonView, isChecked ->
+                when (isChecked) {
+                    true -> {
+                        Thumb.add(this@ReviewActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                    false -> {
+                        Thumb.remove(this@ReviewActivity, User.current ?: return@setOnCheckedChangeListener, area)
+                    }
+                }
+                holder.thumbCount.text = Thumb.getCountByArea(this@ReviewActivity, area).toString()
+            }
         }
     }
 }

@@ -7,5 +7,6 @@ class SDF {
     companion object {
         val dateDot = SimpleDateFormat("yyyy.MM.dd", Locale.KOREA)
         val dateBar = SimpleDateFormat("yyyy-MM-dd", Locale.KOREA)
+        val dateWeek = SimpleDateFormat("yyyy.MM.dd(E)", Locale.KOREA)
     }
 }
