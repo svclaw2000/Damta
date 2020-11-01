@@ -17,7 +17,8 @@
         <item name="android:textSize">@dimen/area_checkbox_text</item>
         <item name="android:fontFamily">@font/noto_sans_cjk_kr_bold</item>
         <item name="android:textColor">@color/dark</item>
-        <item name="android:layout_marginVertical">@dimen/area_checkbox_margin_vertical</item>
+        <item name="android:layout_marginTop">@dimen/area_checkbox_margin_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/area_checkbox_margin_vertical</item>
     </style>
 
     <style name="RegisterPlaceCheckBox" parent="Widget.AppCompat.CompoundButton.CheckBox">
@@ -27,7 +28,8 @@
         <item name="android:drawableLeft">?android:attr/listChoiceIndicatorSingle</item>
         <item name="android:textSize">@dimen/area_checkbox_text</item>
         <item name="android:fontFamily">@font/noto_sans_cjk_kr_medium</item>
-        <item name="android:layout_marginVertical">@dimen/register_checkbox_margin_vertical</item>
+        <item name="android:layout_marginTop">@dimen/register_checkbox_margin_vertical</item>
+        <item name="android:layout_marginBottom">@dimen/register_checkbox_margin_vertical</item>
     </style>
 
     <style name="RegisterPlaceQuestion" parent="Widget.AppCompat.CompoundButton.CheckBox">
@@ -37,8 +39,10 @@
         <item name="android:button">@null</item>
         <item name="android:textSize">@dimen/register_area_question_text</item>
         <item name="android:fontFamily">@font/noto_sans_cjk_kr_medium</item>
-        <item name="android:paddingHorizontal">@dimen/register_area_answer_padding_horizontal</item>
-        <item name="android:paddingVertical">@dimen/register_area_answer_padding_vertical</item>
+        <item name="android:paddingStart">@dimen/register_area_answer_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/register_area_answer_padding_horizontal</item>
+        <item name="android:paddingTop">@dimen/register_area_answer_padding_vertical</item>
+        <item name="android:paddingBottom">@dimen/register_area_answer_padding_vertical</item>
         <item name="android:textColor">@color/text_question</item>
     </style>
 
@@ -46,13 +50,15 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/line</item>
         <item name="android:background">@color/dark</item>
-        <item name="android:layout_marginHorizontal">@dimen/line_margin</item>
+        <item name="android:layout_marginStart">@dimen/line_margin</item>
+        <item name="android:layout_marginEnd">@dimen/line_margin</item>
     </style>
 
     <style name="SplitLineVertical">
         <item name="android:layout_width">@dimen/line</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:background">@color/dark</item>
-        <item name="android:layout_marginVertical">@dimen/line_margin</item>
+        <item name="android:layout_marginTop">@dimen/line_margin</item>
+        <item name="android:layout_marginBottom">@dimen/line_margin</item>
     </style>
 </resources>

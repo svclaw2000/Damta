@@ -30,7 +30,8 @@
         android:orientation="vertical"
         android:layout_gravity="center"
         android:gravity="center"
-        android:paddingHorizontal="@dimen/new_review_density_padding">
+        android:paddingStart="@dimen/new_review_density_padding"
+        android:paddingEnd="@dimen/new_review_density_padding">
 
         <FrameLayout
             android:layout_width="match_parent"

@@ -4,15 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="@dimen/review_margin_horizontal"
-    android:layout_marginVertical="@dimen/review_margin_vertical"
+    android:layout_marginStart="@dimen/review_margin_horizontal"
+    android:layout_marginEnd="@dimen/review_margin_horizontal"
+    android:layout_marginTop="@dimen/review_margin_vertical"
+    android:layout_marginBottom="@dimen/review_margin_vertical"
     android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="@dimen/review_title_margin_horizontal">
+        android:layout_marginStart="@dimen/review_title_margin_horizontal"
+        android:layout_marginEnd="@dimen/review_title_margin_horizontal">
 
         <TextView
             android:id="@+id/tv_nickname"
@@ -47,7 +50,9 @@
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
         android:textColor="@color/dark"
         android:background="@drawable/review_box"
-        android:paddingHorizontal="@dimen/review_padding_horizontal"
-        android:paddingVertical="@dimen/review_padding_vertical"
+        android:paddingStart="@dimen/review_padding_horizontal"
+        android:paddingEnd="@dimen/review_padding_horizontal"
+        android:paddingTop="@dimen/review_padding_vertical"
+        android:paddingBottom="@dimen/review_padding_vertical"
         android:layout_marginTop="@dimen/review_content_margin_top"/>
 </LinearLayout>

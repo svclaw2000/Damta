@@ -1,6 +1,7 @@
 package com.khnsoft.damta
 
 import android.content.Intent
+import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
@@ -8,6 +9,7 @@ import android.view.animation.AnimationUtils
 import com.gun0912.tedpermission.PermissionListener
 import com.gun0912.tedpermission.TedPermission
 import com.khnsoft.damta.data.Area
+import com.khnsoft.damta.data.Image
 import com.khnsoft.damta.data.User
 import com.khnsoft.damta.utils.AreaType
 import com.khnsoft.damta.utils.SDF
@@ -88,7 +90,7 @@ class LoadingActivity : AppCompatActivity() {
             density = 3.0
         ).add(this@LoadingActivity)
 
-        Area(
+        val exId = Area(
             name = "을지로입구역 8번 출구",
             type = AreaType.CLOSED,
             address = "서울 중구 을지로1가",
@@ -98,6 +100,7 @@ class LoadingActivity : AppCompatActivity() {
             vent = true,
             density = 3.0
         ).add(this@LoadingActivity)
+        val ex = Area.getById(this@LoadingActivity, exId ?: return)
 
         Area(
             name = "원조갈매기집",
@@ -197,9 +200,22 @@ class LoadingActivity : AppCompatActivity() {
         User(
             username = "hello",
             password = "1234",
-            nickname = "Keich",
+            nickname = "AnNyeong",
             birthday = SDF.dateBar.parse("2000-01-12"),
             email = "svclaw2000@hanmail.net"
+        ).add(this@LoadingActivity)
+
+        val ex1 = BitmapFactory.decodeResource(resources, R.drawable.ex_1_1)
+        val ex2 = BitmapFactory.decodeResource(resources, R.drawable.ex_1_2)
+
+        Image(
+            area=ex,
+            image=ex1
+        ).add(this@LoadingActivity)
+
+        Image(
+            area=ex,
+            image=ex2
         ).add(this@LoadingActivity)
     }
 }

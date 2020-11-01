@@ -33,19 +33,22 @@
     <dimen name="register_subtitle_text">20sp</dimen>
     <dimen name="register_text">15sp</dimen>
     <dimen name="register_title_text">30sp</dimen>
-    <dimen name="register_title_margin_top">60dp</dimen>
-    <dimen name="register_number_margin_top">55dp</dimen>
+    <dimen name="register_title_margin_top">40dp</dimen>
+    <dimen name="register_number_margin_top">35dp</dimen>
     <dimen name="register_title_margin_start">5dp</dimen>
 
     <dimen name="main_settings_icon">40dp</dimen>
     <dimen name="main_search_stroke">2dp</dimen>
     <dimen name="main_search_margin">20dp</dimen>
     <dimen name="main_search_padding_horizontal">15dp</dimen>
+    <dimen name="main_search_padding_vertical">5dp</dimen>
     <dimen name="main_search_text">16sp</dimen>
     <dimen name="main_gps_icon">100dp</dimen>
     <dimen name="main_banner_margin">50dp</dimen>
     <dimen name="main_banner_close_margin">20dp</dimen>
     <dimen name="main_banner_close">15dp</dimen>
+
+    <dimen name="main_review_margin">20dp</dimen>
 
     <dimen name="main_place_btn_margin_vertical">15dp</dimen>
 
@@ -108,12 +111,12 @@
     <dimen name="register_area_question_text">15sp</dimen>
     <dimen name="register_area_question_margin">20dp</dimen>
     <dimen name="register_area_question_margin_top">30dp</dimen>
-    <dimen name="register_area_answer_padding_horizontal">8dp</dimen>
-    <dimen name="register_area_answer_padding_vertical">2dp</dimen>
+    <dimen name="register_area_answer_padding_horizontal">12dp</dimen>
+    <dimen name="register_area_answer_padding_vertical">0dp</dimen>
     <dimen name="register_area_check_standard_text">14sp</dimen>
     <dimen name="register_area_check_standard_margin_vertical">20dp</dimen>
 
-    <dimen name="register_checkbox_margin_vertical">10dp</dimen>
+    <dimen name="register_checkbox_margin_vertical">0dp</dimen>
     <dimen name="register_checkbox_margin_horizontal">20dp</dimen>
     <dimen name="register_information_corner">40dp</dimen>
 

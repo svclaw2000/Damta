@@ -5,8 +5,10 @@
     android:id="@+id/item_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="@dimen/bookmark_margin_horizontal"
-    android:layout_marginVertical="@dimen/bookmark_margin_vertical"
+    android:layout_marginStart="@dimen/bookmark_margin_horizontal"
+    android:layout_marginEnd="@dimen/bookmark_margin_horizontal"
+    android:layout_marginTop="@dimen/bookmark_margin_vertical"
+    android:layout_marginBottom="@dimen/bookmark_margin_vertical"
     android:orientation="vertical">
 
     <LinearLayout
@@ -115,14 +117,16 @@
             android:background="@drawable/bookmark"
             android:button="@color/invisible"
             android:layout_gravity="center|end"
-            android:layout_marginHorizontal="@dimen/bookmark_bookmark_margin_horizontal"/>
+            android:layout_marginStart="@dimen/bookmark_bookmark_margin_horizontal"
+            android:layout_marginEnd="@dimen/bookmark_bookmark_margin_horizontal"/>
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="@dimen/review_title_margin_horizontal"
+        android:layout_marginStart="@dimen/review_title_margin_horizontal"
+        android:layout_marginEnd="@dimen/review_title_margin_horizontal"
         android:layout_marginTop="@dimen/small_space">
 
         <TextView
@@ -158,7 +162,9 @@
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
         android:textColor="@color/dark"
         android:background="@drawable/review_box"
-        android:paddingHorizontal="@dimen/review_padding_horizontal"
-        android:paddingVertical="@dimen/review_padding_vertical"
+        android:paddingStart="@dimen/review_padding_horizontal"
+        android:paddingEnd="@dimen/review_padding_horizontal"
+        android:paddingTop="@dimen/review_padding_vertical"
+        android:paddingBottom="@dimen/review_padding_vertical"
         android:layout_marginTop="@dimen/review_content_margin_top"/>
 </LinearLayout>

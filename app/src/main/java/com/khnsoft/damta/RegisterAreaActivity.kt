@@ -108,7 +108,6 @@ class RegisterAreaActivity : AppCompatActivity() {
                     if (areaId != null) {
                         if (frag6.curImage != null) {
                             val image = Image(
-                                user = User.current ?: return@setOnClickListener,
                                 area = Area.getById(this@RegisterAreaActivity, areaId),
                                 image = frag6.curImage
                             )

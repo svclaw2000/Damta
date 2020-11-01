@@ -9,7 +9,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/topbar_padding_horizontal">
+        android:paddingStart="@dimen/topbar_padding_horizontal"
+        android:paddingEnd="@dimen/topbar_padding_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
             android:layout_height="@dimen/medium_icon"
             android:src="@drawable/back_arrow"
             android:layout_gravity="bottom|start"
-            android:layout_marginVertical="@dimen/back_margin" />
+            android:layout_marginTop="@dimen/back_margin"
+            android:layout_marginBottom="@dimen/back_margin" />
     </FrameLayout>
 
     <FrameLayout
@@ -57,7 +59,8 @@
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
                 android:textSize="@dimen/mypage_item_text"
                 android:textColor="@android:color/white"
-                android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
+                android:layout_marginTop="@dimen/mypage_item_margin_vertical"
+                android:layout_marginBottom="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
                 android:id="@+id/btn_bookmark"
@@ -67,7 +70,8 @@
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
                 android:textSize="@dimen/mypage_item_text"
                 android:textColor="@android:color/white"
-                android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
+                android:layout_marginTop="@dimen/mypage_item_margin_vertical"
+                android:layout_marginBottom="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
                 android:id="@+id/btn_review"
@@ -77,7 +81,8 @@
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
                 android:textSize="@dimen/mypage_item_text"
                 android:textColor="@android:color/white"
-                android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
+                android:layout_marginTop="@dimen/mypage_item_margin_vertical"
+                android:layout_marginBottom="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
                 android:id="@+id/btn_settings"
@@ -87,7 +92,8 @@
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
                 android:textSize="@dimen/mypage_item_text"
                 android:textColor="@android:color/white"
-                android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
+                android:layout_marginTop="@dimen/mypage_item_margin_vertical"
+                android:layout_marginBottom="@dimen/mypage_item_margin_vertical"/>
 
             <TextView
                 android:id="@+id/btn_service"
@@ -97,7 +103,8 @@
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
                 android:textSize="@dimen/mypage_item_text"
                 android:textColor="@android:color/white"
-                android:layout_marginVertical="@dimen/mypage_item_margin_vertical"/>
+                android:layout_marginTop="@dimen/mypage_item_margin_vertical"
+                android:layout_marginBottom="@dimen/mypage_item_margin_vertical"/>
 
             <Space
                 android:layout_width="0dp"

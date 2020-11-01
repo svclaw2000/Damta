@@ -10,7 +10,8 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:background="@android:color/white"
-        android:paddingHorizontal="@dimen/register_padding_horizontal"
+        android:paddingStart="@dimen/register_padding_horizontal"
+        android:paddingEnd="@dimen/register_padding_horizontal"
         android:paddingTop="@dimen/register_padding_top">
 
         <LinearLayout

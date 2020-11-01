@@ -5,8 +5,10 @@
     android:id="@+id/item_container"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginHorizontal="@dimen/bookmark_margin_horizontal"
-    android:layout_marginVertical="@dimen/bookmark_margin_vertical"
+    android:layout_marginStart="@dimen/bookmark_margin_horizontal"
+    android:layout_marginEnd="@dimen/bookmark_margin_horizontal"
+    android:layout_marginTop="@dimen/bookmark_margin_vertical"
+    android:layout_marginBottom="@dimen/bookmark_margin_vertical"
     android:orientation="vertical">
 
     <LinearLayout
@@ -75,7 +77,8 @@
                     android:textColor="@color/highlight"
                     android:textSize="@dimen/bookmark_reviews_text"
                     android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                    android:layout_marginHorizontal="@dimen/small_space"/>
+                    android:layout_marginStart="@dimen/small_space"
+                    android:layout_marginEnd="@dimen/small_space"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -123,6 +126,7 @@
             android:background="@drawable/bookmark"
             android:button="@color/invisible"
             android:layout_gravity="center|end"
-            android:layout_marginHorizontal="@dimen/bookmark_bookmark_margin_horizontal"/>
+            android:layout_marginStart="@dimen/bookmark_bookmark_margin_horizontal"
+            android:layout_marginEnd="@dimen/bookmark_bookmark_margin_horizontal"/>
     </LinearLayout>
 </LinearLayout>

@@ -86,12 +86,12 @@ class DetailActivity : AppCompatActivity() {
 
         btn_navigate.setOnClickListener {
             try {
-                val uri = Uri.parse("kakaomap://route?ep=${area.x},${area.y}&by=FOOT")
+                val uri = Uri.parse("kakaomap://route?ep=${area.y},${area.x}&by=FOOT")
                 val intent = Intent(Intent.ACTION_VIEW)
                 intent.setData(uri)
                 startActivity(intent)
             } catch (e: Exception) {
-                val uri = Uri.parse("https://map.kakao.com/link/to/${area.address},${area.x},${area.y}")
+                val uri = Uri.parse("https://map.kakao.com/link/to/${area.address},${area.y},${area.x}")
                 val intent = Intent(Intent.ACTION_VIEW)
                 intent.setData(uri)
                 if (intent.resolveActivity(packageManager) != null) {

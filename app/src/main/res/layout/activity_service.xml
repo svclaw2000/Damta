@@ -18,7 +18,8 @@
             android:layout_height="@dimen/medium_icon"
             android:src="@drawable/back_arrow"
             android:layout_gravity="bottom|start"
-            android:layout_marginVertical="@dimen/back_margin" />
+            android:layout_marginTop="@dimen/back_margin"
+            android:layout_marginBottom="@dimen/back_margin" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -67,7 +68,8 @@
         android:textColor="@color/dark"
         android:fontFamily="@font/noto_sans_cjk_kr_bold"
         android:layout_marginTop="@dimen/mypage_subtitle_margin_vertical"
-        android:layout_marginHorizontal="@dimen/mypage_subtitle_margin_horizontal"/>
+        android:layout_marginStart="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginEnd="@dimen/mypage_subtitle_margin_horizontal"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -76,13 +78,15 @@
         android:textSize="@dimen/service_content_text"
         android:textColor="@color/dark"
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
-        android:layout_marginHorizontal="@dimen/mypage_subtitle_margin_horizontal"/>
+        android:layout_marginStart="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginEnd="@dimen/mypage_subtitle_margin_horizontal"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="@dimen/mypage_subtitle_margin_horizontal">
+        android:layout_marginStart="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginEnd="@dimen/mypage_subtitle_margin_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -121,15 +125,18 @@
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
         android:gravity="top"
         android:layout_marginTop="@dimen/service_box_margin_top"
-        android:layout_marginHorizontal="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginStart="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginEnd="@dimen/mypage_subtitle_margin_horizontal"
         android:padding="@dimen/service_box_padding"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginHorizontal="@dimen/mypage_subtitle_margin_horizontal"
-        android:layout_marginVertical="@dimen/service_submit_margin_vertical"
+        android:layout_marginStart="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginEnd="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginTop="@dimen/service_submit_margin_vertical"
+        android:layout_marginBottom="@dimen/service_submit_margin_vertical"
         android:gravity="center">
 
         <CheckBox
@@ -152,8 +159,10 @@
             android:textSize="@dimen/myprofile_btn_text"
             android:textColor="@android:color/white"
             android:fontFamily="@font/noto_sans_cjk_kr_regular"
-            android:paddingHorizontal="@dimen/myprofile_btn_padding_horizontal"
-            android:paddingVertical="@dimen/myprofile_btn_padding_vertical"
+            android:paddingStart="@dimen/myprofile_btn_padding_horizontal"
+            android:paddingEnd="@dimen/myprofile_btn_padding_horizontal"
+            android:paddingTop="@dimen/myprofile_btn_padding_vertical"
+            android:paddingBottom="@dimen/myprofile_btn_padding_vertical"
             android:background="@drawable/btn_dark"/>
     </LinearLayout>
 </LinearLayout>

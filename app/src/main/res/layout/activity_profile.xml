@@ -18,7 +18,8 @@
             android:layout_height="@dimen/medium_icon"
             android:src="@drawable/back_arrow"
             android:layout_gravity="bottom|start"
-            android:layout_marginVertical="@dimen/back_margin" />
+            android:layout_marginTop="@dimen/back_margin"
+            android:layout_marginBottom="@dimen/back_margin" />
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -67,22 +68,27 @@
         android:textSize="@dimen/mypage_subtitle_text"
         android:textColor="@color/dark"
         android:fontFamily="@font/noto_sans_cjk_kr_bold"
-        android:layout_marginVertical="@dimen/mypage_subtitle_margin_vertical"
-        android:layout_marginHorizontal="@dimen/mypage_subtitle_margin_horizontal"/>
+        android:layout_marginTop="@dimen/mypage_subtitle_margin_vertical"
+        android:layout_marginBottom="@dimen/mypage_subtitle_margin_vertical"
+        android:layout_marginStart="@dimen/mypage_subtitle_margin_horizontal"
+        android:layout_marginEnd="@dimen/mypage_subtitle_margin_horizontal"/>
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="@dimen/myprofile_input_margin_horizontal">
+        android:layout_marginStart="@dimen/myprofile_input_margin_horizontal"
+        android:layout_marginEnd="@dimen/myprofile_input_margin_horizontal">
 
         <TableRow
-            android:layout_marginVertical="@dimen/myprofile_input_margin_vertical">
+            android:layout_marginTop="@dimen/myprofile_input_margin_vertical"
+            android:layout_marginBottom="@dimen/myprofile_input_margin_vertical">
             <TextView
                 android:text="@string/user_nick"
                 android:textColor="@color/dark"
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                android:layout_marginHorizontal="@dimen/myprofile_input_title_margin_horizontal"/>
+                android:layout_marginStart="@dimen/myprofile_input_title_margin_horizontal"
+                android:layout_marginEnd="@dimen/myprofile_input_title_margin_horizontal"/>
 
             <EditText
                 android:id="@+id/et_nickname"
@@ -93,17 +99,20 @@
                 android:enabled="false"
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                android:paddingHorizontal="@dimen/input_padding_horizontal"/>
+                android:paddingStart="@dimen/input_padding_horizontal"
+                android:paddingEnd="@dimen/input_padding_horizontal"/>
         </TableRow>
 
         <TableRow
-            android:layout_marginVertical="@dimen/myprofile_input_margin_vertical">
+            android:layout_marginTop="@dimen/myprofile_input_margin_vertical"
+            android:layout_marginBottom="@dimen/myprofile_input_margin_vertical">
             <TextView
                 android:text="@string/user_bday"
                 android:textColor="@color/dark"
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                android:layout_marginHorizontal="@dimen/myprofile_input_title_margin_horizontal" />
+                android:layout_marginStart="@dimen/myprofile_input_title_margin_horizontal"
+                android:layout_marginEnd="@dimen/myprofile_input_title_margin_horizontal" />
 
             <EditText
                 android:id="@+id/et_birthday"
@@ -115,17 +124,20 @@
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
                 android:focusable="false"
-                android:paddingHorizontal="@dimen/input_padding_horizontal"/>
+                android:paddingStart="@dimen/input_padding_horizontal"
+                android:paddingEnd="@dimen/input_padding_horizontal"/>
         </TableRow>
 
         <TableRow
-            android:layout_marginVertical="@dimen/myprofile_input_margin_vertical">
+            android:layout_marginTop="@dimen/myprofile_input_margin_vertical"
+            android:layout_marginBottom="@dimen/myprofile_input_margin_vertical">
             <TextView
                 android:text="@string/user_email"
                 android:textColor="@color/dark"
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_bold"
-                android:layout_marginHorizontal="@dimen/myprofile_input_title_margin_horizontal"/>
+                android:layout_marginStart="@dimen/myprofile_input_title_margin_horizontal"
+                android:layout_marginEnd="@dimen/myprofile_input_title_margin_horizontal"/>
 
             <EditText
                 android:id="@+id/et_email"
@@ -136,7 +148,8 @@
                 android:enabled="false"
                 android:textSize="@dimen/mypage_content_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                android:paddingHorizontal="@dimen/input_padding_horizontal"/>
+                android:paddingStart="@dimen/input_padding_horizontal"
+                android:paddingEnd="@dimen/input_padding_horizontal"/>
         </TableRow>
     </TableLayout>
 
@@ -148,8 +161,10 @@
         android:textSize="@dimen/myprofile_btn_text"
         android:textColor="@android:color/white"
         android:fontFamily="@font/noto_sans_cjk_kr_regular"
-        android:paddingHorizontal="@dimen/myprofile_btn_padding_horizontal"
-        android:paddingVertical="@dimen/myprofile_btn_padding_vertical"
+        android:paddingStart="@dimen/myprofile_btn_padding_horizontal"
+        android:paddingEnd="@dimen/myprofile_btn_padding_horizontal"
+        android:paddingTop="@dimen/myprofile_btn_padding_vertical"
+        android:paddingBottom="@dimen/myprofile_btn_padding_vertical"
         android:background="@drawable/btn_dark"
         android:layout_gravity="end"
         android:layout_margin="@dimen/myprofile_input_margin_horizontal"/>

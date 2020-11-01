@@ -12,7 +12,8 @@
         android:src="@drawable/back_arrow"
         android:layout_gravity="bottom|start"
         android:layout_marginTop="@dimen/back_margin"
-        android:layout_marginHorizontal="@dimen/topbar_padding_horizontal" />
+        android:layout_marginStart="@dimen/topbar_padding_horizontal"
+        android:layout_marginEnd="@dimen/topbar_padding_horizontal" />
 
     <TextView
         android:id="@+id/tv_standard_title"

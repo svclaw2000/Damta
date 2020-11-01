@@ -25,8 +25,10 @@
             android:layout_weight="1"
             android:background="@drawable/search_input"
             android:gravity="center"
-            android:paddingHorizontal="@dimen/main_search_padding_horizontal"
-            android:paddingVertical="5dp">
+            android:paddingStart="@dimen/main_search_padding_horizontal"
+            android:paddingEnd="@dimen/main_search_padding_horizontal"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
 
             <TextView
                 android:id="@+id/tv_search"
@@ -165,7 +167,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="gone">
 
         <LinearLayout
             android:id="@+id/btn_cancel_place"
@@ -190,7 +193,8 @@
             <FrameLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingHorizontal="@dimen/topbar_padding_horizontal">
+                android:paddingStart="@dimen/topbar_padding_horizontal"
+                android:paddingEnd="@dimen/topbar_padding_horizontal">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -235,7 +239,8 @@
                 android:textColor="@color/gray"
                 android:textSize="@dimen/detail_address_text"
                 android:fontFamily="@font/noto_sans_cjk_kr_regular"
-                android:layout_marginVertical="@dimen/detail_address_margin_vertical"
+                android:layout_marginTop="@dimen/detail_address_margin_vertical"
+                android:layout_marginBottom="@dimen/detail_address_margin_vertical"
                 android:layout_gravity="center" />
 
             <LinearLayout
@@ -384,11 +389,13 @@
 
             <TableLayout
                 android:layout_gravity="center"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="@dimen/main_place_btn_margin_vertical">
+                android:paddingTop="@dimen/main_place_btn_margin_vertical"
+                android:layout_marginStart="@dimen/main_review_margin"
+                android:layout_marginEnd="@dimen/main_review_margin">
 
-                <TableRow>
+                <TableRow android:gravity="center">
                     <TextView
                         android:id="@+id/tv_review_user_1"
                         android:layout_width="wrap_content"
@@ -397,6 +404,10 @@
                         android:textSize="@dimen/review_id_text"
                         android:textColor="@color/dark"
                         android:fontFamily="@font/noto_sans_cjk_kr_bold"/>
+
+                    <Space
+                        android:layout_width="@dimen/main_review_margin"
+                        android:layout_height="0dp"/>
 
                     <TextView
                         android:id="@+id/tv_review_1"
@@ -408,7 +419,7 @@
                         android:fontFamily="@font/noto_sans_cjk_kr_medium"/>
                 </TableRow>
 
-                <TableRow>
+                <TableRow android:gravity="center">
                     <TextView
                         android:id="@+id/tv_review_user_2"
                         android:layout_width="wrap_content"
@@ -417,6 +428,10 @@
                         android:textSize="@dimen/review_id_text"
                         android:textColor="@color/dark"
                         android:fontFamily="@font/noto_sans_cjk_kr_bold"/>
+
+                    <Space
+                        android:layout_width="@dimen/main_review_margin"
+                        android:layout_height="0dp"/>
 
                     <TextView
                         android:id="@+id/tv_review_2"
@@ -433,8 +448,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingHorizontal="@dimen/detail_btn_space"
-                android:layout_marginVertical="@dimen/main_place_btn_margin_vertical">
+                android:paddingStart="@dimen/detail_btn_space"
+                android:paddingEnd="@dimen/detail_btn_space"
+                android:layout_marginTop="@dimen/main_place_btn_margin_vertical"
+                android:layout_marginBottom="@dimen/main_place_btn_margin_vertical">
 
                 <LinearLayout
                     android:id="@+id/btn_navigate"
@@ -444,7 +461,8 @@
                     android:orientation="horizontal"
                     android:background="@drawable/btn_detail"
                     android:gravity="center"
-                    android:paddingVertical="@dimen/detail_btn_padding_vertical">
+                    android:paddingTop="@dimen/detail_btn_padding_vertical"
+                    android:paddingBottom="@dimen/detail_btn_padding_vertical">
 
                     <ImageView
                         android:layout_width="@dimen/small_icon"
@@ -473,7 +491,8 @@
                     android:orientation="horizontal"
                     android:background="@drawable/btn_detail"
                     android:gravity="center"
-                    android:paddingVertical="@dimen/detail_btn_padding_vertical">
+                    android:paddingTop="@dimen/detail_btn_padding_vertical"
+                    android:paddingBottom="@dimen/detail_btn_padding_vertical">
 
                     <ImageView
                         android:layout_width="@dimen/small_icon"
@@ -529,6 +548,7 @@
         android:orientation="vertical"
         android:background="@color/shadowed"
         android:visibility="gone"
+        tools:visibility="visible"
         android:gravity="center">
 
         <LinearLayout
@@ -536,7 +556,8 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="@drawable/popup_box"
-            android:layout_marginHorizontal="@dimen/area_popup_margin_horizontal">
+            android:layout_marginStart="@dimen/area_popup_margin_horizontal"
+            android:layout_marginEnd="@dimen/area_popup_margin_horizontal">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -544,20 +565,59 @@
                 android:orientation="vertical"
                 android:layout_margin="@dimen/area_checkbox_margin">
 
-                <CheckBox
-                    android:id="@+id/cb_type_opened"
-                    style="@style/PlaceCheckBox"
-                    android:text="@string/area_type_opened" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
-                <CheckBox
-                    android:id="@+id/cb_type_closed"
-                    style="@style/PlaceCheckBox"
-                    android:text="@string/area_type_closed" />
+                    <ImageView
+                        android:layout_width="@dimen/small_icon"
+                        android:layout_height="@dimen/small_icon"
+                        android:src="@drawable/icon_opened"
+                        android:layout_marginEnd="@dimen/small_space"/>
 
-                <CheckBox
-                    android:id="@+id/cb_type_fullyclosed"
-                    style="@style/PlaceCheckBox"
-                    android:text="@string/area_type_fullyclosed" />
+                    <CheckBox
+                        android:id="@+id/cb_type_opened"
+                        style="@style/PlaceCheckBox"
+                        android:text="@string/area_type_opened" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/small_icon"
+                        android:layout_height="@dimen/small_icon"
+                        android:src="@drawable/icon_closed"
+                        android:layout_marginEnd="@dimen/small_space"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_type_closed"
+                        style="@style/PlaceCheckBox"
+                        android:text="@string/area_type_closed" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="@dimen/small_icon"
+                        android:layout_height="@dimen/small_icon"
+                        android:src="@drawable/icon_fullyclosed"
+                        android:layout_marginEnd="@dimen/small_space"/>
+
+                    <CheckBox
+                        android:id="@+id/cb_type_fullyclosed"
+                        style="@style/PlaceCheckBox"
+                        android:text="@string/area_type_fullyclosed" />
+                </LinearLayout>
             </LinearLayout>
 
             <View
@@ -579,7 +639,8 @@
                     android:gravity="center"
                     android:fontFamily="@font/noto_sans_cjk_kr_black"
                     android:textSize="@dimen/area_decision_text"
-                    android:paddingVertical="@dimen/area_decision_padding_vertical"/>
+                    android:paddingTop="@dimen/area_decision_padding_vertical"
+                    android:paddingBottom="@dimen/area_decision_padding_vertical"/>
 
                 <View
                     style="@style/SplitLineVertical" />
@@ -595,15 +656,18 @@
                     android:gravity="center"
                     android:fontFamily="@font/noto_sans_cjk_kr_black"
                     android:textSize="@dimen/area_decision_text"
-                    android:paddingVertical="@dimen/area_decision_padding_vertical"/>
+                    android:paddingTop="@dimen/area_decision_padding_vertical"
+                    android:paddingBottom="@dimen/area_decision_padding_vertical"/>
             </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/area_popup_margin_horizontal"
-            android:layout_marginVertical="@dimen/area_information_margin_vertical"
+            android:layout_marginStart="@dimen/area_popup_margin_horizontal"
+            android:layout_marginEnd="@dimen/area_popup_margin_horizontal"
+            android:layout_marginTop="@dimen/area_information_margin_vertical"
+            android:layout_marginBottom="@dimen/area_information_margin_vertical"
             android:orientation="horizontal" >
 
             <ImageView

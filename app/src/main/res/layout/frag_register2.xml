@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:paddingHorizontal="@dimen/register_content_padding_horizontal">
+    android:paddingStart="@dimen/register_content_padding_horizontal"
+    android:paddingEnd="@dimen/register_content_padding_horizontal">
 
     <Space
         android:layout_width="0dp"
@@ -38,7 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/dark"
-        android:paddingHorizontal="@dimen/input_padding_horizontal"
+        android:paddingStart="@dimen/input_padding_horizontal"
+        android:paddingEnd="@dimen/input_padding_horizontal"
         tools:text="유정"
         android:inputType="text"
         android:nextFocusForward="@id/et_email"
@@ -64,7 +66,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/dark"
-        android:paddingHorizontal="@dimen/input_padding_horizontal"
+        android:paddingStart="@dimen/input_padding_horizontal"
+        android:paddingEnd="@dimen/input_padding_horizontal"
         tools:text="1999.11.23"
         android:fontFamily="@font/noto_sans_cjk_kr_medium"
         android:textSize="@dimen/register_text"
@@ -89,7 +92,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/dark"
-        android:paddingHorizontal="@dimen/input_padding_horizontal"
+        android:paddingStart="@dimen/input_padding_horizontal"
+        android:paddingEnd="@dimen/input_padding_horizontal"
         tools:text="s2yujeong@naver.com"
         android:inputType="textEmailAddress"
         android:fontFamily="@font/noto_sans_cjk_kr_medium"

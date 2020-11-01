@@ -9,7 +9,8 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingHorizontal="@dimen/topbar_padding_horizontal">
+        android:paddingStart="@dimen/topbar_padding_horizontal"
+        android:paddingEnd="@dimen/topbar_padding_horizontal">
 
         <TextView
             android:layout_width="wrap_content"
@@ -26,7 +27,8 @@
             android:layout_height="@dimen/medium_icon"
             android:src="@drawable/back_arrow"
             android:layout_gravity="bottom|start"
-            android:layout_marginVertical="@dimen/back_margin" />
+            android:layout_marginTop="@dimen/back_margin"
+            android:layout_marginBottom="@dimen/back_margin" />
 
         <ImageView
             android:id="@+id/btn_write_review"

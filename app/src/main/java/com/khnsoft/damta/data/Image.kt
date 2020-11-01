@@ -11,7 +11,6 @@ import java.util.*
 
 class Image(
     var id : Int = -1,
-    var user : User? = null,
     var area : Area? = null,
     var image : Bitmap? = null,
     var createdDate : Date? = null
@@ -20,7 +19,6 @@ class Image(
         fun getFromJson(context: Context, jImage: JsonObject) : Image {
             return Image(
                 id = jImage["id"].asInt,
-                user = User.getById(context, jImage["user_id"].asInt),
                 area = Area.getById(context, jImage["area_id"].asInt),
                 image = BitmapHandler.bitmapFromBase64(jImage["image"].asString),
                 createdDate = SDF.dateBar.parse(jImage["created_date"].asString)
@@ -32,7 +30,7 @@ class Image(
 
             try {
                 val sql = """
-                    SELECT id, user_id, area_id, image, created_date 
+                    SELECT id, area_id, image, created_date 
                     FROM IMAGE_TB  
                     WHERE id=${id}
                 """.trimIndent()
@@ -55,7 +53,7 @@ class Image(
 
             try {
                 val sql = """
-                    SELECT id, user_id, area_id, image, created_date 
+                    SELECT id, area_id, image, created_date 
                     FROM IMAGE_TB  
                     WHERE area_id=${id}
                 """.trimIndent()
@@ -87,9 +85,8 @@ class Image(
 
         try {
             val sql = """
-                    INSERT INTO IMAGE_TB (user_id, area_id, image, created_date)
+                    INSERT INTO IMAGE_TB (area_id, image, created_date)
                     VALUES (
-                        "${user?.id ?: return false}",
                         "${area?.id ?: return false}",
                         "${BitmapHandler.bitmapToPngBase64(image ?: return false)}",
                         "${SDF.dateBar.format(Date())}"
@@ -113,7 +110,6 @@ class Image(
         try {
             val sql = """
                     UPDATE IMAGE_TB SET
-                    user_id="${user?.id ?: return false},"
                     area_id="${area?.id ?: return false}",
                     image="${BitmapHandler.bitmapToPngBase64(image ?: return false)}"
                     WHERE id=${id}

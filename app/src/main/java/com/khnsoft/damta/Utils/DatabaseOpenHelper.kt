@@ -119,7 +119,6 @@ class DatabaseOpenHelper(val context: Context?, name: String?, factory: SQLiteDa
         val sql = """
             CREATE TABLE IF NOT EXISTS IMAGE_TB (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                user_id INTEGER NOT NULL REFERENCES USER_TB(id) ON DELETE CASCADE,
                 area_id INTEGER NOT NULL REFERENCES AREA_TB(id) ON DELETE CASCADE,
                 image TEXT NOT NULL,
                 created_date TEXT NOT NULL
