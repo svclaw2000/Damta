@@ -32,4 +32,10 @@ Kakao Local API
 ```
 
 ## 👨‍💻 Members
+- 김민서: [ProjectManager/Planning/UX&UI] himinseo0527@gmail.com
+- 안연정: [Planning/Wireframe] duswjddl7020@naver.com
+- 최유정: [Planning/UX&UI] s2yujeong@naver.com
+- 박은영: [Planning/UX&UI] exunxxy7@gmail.com
+- 이은솔: [Planning/Investigate] opl1205@naver.com
+- 이현송: [Planning/Investigate] gusthd2088@naver.com
 - [박규훤](https://github.com/svclaw2000): [FrontEnd] svclaw2000@gmail.com
