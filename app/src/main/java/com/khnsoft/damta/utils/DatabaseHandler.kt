@@ -4,7 +4,6 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import com.google.gson.JsonArray
 import com.google.gson.JsonObject
-import java.lang.Exception
 
 class DatabaseHandler(context: Context?) {
     private val mHelper: DatabaseOpenHelper = DatabaseOpenHelper(context, DB_NAME, null, DB_VERSION)

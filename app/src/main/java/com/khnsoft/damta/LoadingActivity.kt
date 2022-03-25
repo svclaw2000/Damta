@@ -2,12 +2,12 @@ package com.khnsoft.damta
 
 import android.content.Intent
 import android.graphics.BitmapFactory
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import com.gun0912.tedpermission.PermissionListener
-import com.gun0912.tedpermission.TedPermission
+import com.gun0912.tedpermission.normal.TedPermission
 import com.khnsoft.damta.data.Area
 import com.khnsoft.damta.data.Image
 import com.khnsoft.damta.data.User
@@ -15,7 +15,6 @@ import com.khnsoft.damta.utils.AreaType
 import com.khnsoft.damta.utils.SDF
 import com.khnsoft.damta.utils.SharedPreferencesHelper
 import kotlinx.android.synthetic.main.activity_loading.*
-import java.util.ArrayList
 
 class LoadingActivity : AppCompatActivity() {
     companion object {
@@ -47,7 +46,7 @@ class LoadingActivity : AppCompatActivity() {
     }
 
     fun requestPermission() {
-        TedPermission.with(this@LoadingActivity)
+        TedPermission.create()
             .setPermissionListener(permissionListener)
             .setPermissions(
                 android.Manifest.permission.INTERNET,
@@ -73,7 +72,7 @@ class LoadingActivity : AppCompatActivity() {
             finish()
         }
 
-        override fun onPermissionDenied(deniedPermissions: ArrayList<String>?) {
+        override fun onPermissionDenied(deniedPermissions: MutableList<String>?) {
             finish()
         }
     }
