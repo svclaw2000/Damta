@@ -48,4 +48,5 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
 
     implementation project(":domain")
+    implementation project(":common")
 }
