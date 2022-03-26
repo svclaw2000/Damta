@@ -1,6 +1,9 @@
 package com.khnsoft.damta.data.repository
 
+import com.khnsoft.damta.common.extension.errorMap
+import com.khnsoft.damta.data.error.UserErrorData
 import com.khnsoft.damta.data.mapper.toData
+import com.khnsoft.damta.data.mapper.toDomain
 import com.khnsoft.damta.data.source.UserLocalDataSource
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
@@ -11,6 +14,11 @@ internal class UserRepositoryImpl @Inject constructor(
 ) : UserRepository {
 
     override suspend fun signUp(user: User, password: String): Result<Unit> {
-        return local.signUp(user.toData(), password)
+        return local.signUp(user.toData(), password).errorMap { error ->
+            when (error) {
+                is UserErrorData -> error.toDomain()
+                else -> Exception(error)
+            }
+        }
     }
 }

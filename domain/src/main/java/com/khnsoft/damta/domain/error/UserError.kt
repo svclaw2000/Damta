@@ -12,4 +12,6 @@ sealed class UserError(
     object InvalidEmail : UserError()
 
     object InvalidNickname : UserError()
+
+    object DuplicatedUsername : UserError()
 }

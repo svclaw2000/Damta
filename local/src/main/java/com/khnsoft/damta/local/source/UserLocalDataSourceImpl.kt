@@ -1,5 +1,8 @@
 package com.khnsoft.damta.local.source
 
+import android.database.sqlite.SQLiteConstraintException
+import com.khnsoft.damta.common.extension.errorMap
+import com.khnsoft.damta.data.error.UserErrorData
 import com.khnsoft.damta.data.model.UserData
 import com.khnsoft.damta.data.source.UserLocalDataSource
 import com.khnsoft.damta.local.dao.UserDao
@@ -18,6 +21,11 @@ internal class UserLocalDataSourceImpl @Inject constructor(
     ): Result<Unit> = runCatching {
         withContext(Dispatchers.IO) {
             userDao.addUser(user.toDto(password))
+        }
+    }.errorMap { error ->
+        when (error) {
+            is SQLiteConstraintException -> UserErrorData.DuplicatedUsername
+            else -> Exception(error)
         }
     }
 }
