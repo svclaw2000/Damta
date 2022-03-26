@@ -1,8 +1,8 @@
 package com.khnsoft.damta.domain.usecase
 
+import com.khnsoft.damta.common.extension.flatMap
 import com.khnsoft.damta.domain.common.HashGenerator
 import com.khnsoft.damta.domain.common.UserValidator
-import com.khnsoft.damta.domain.common.flatMap
 import com.khnsoft.damta.domain.error.UserError
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
