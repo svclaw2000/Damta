@@ -1,4 +1,4 @@
-package com.khnsoft.damta.domain.common
+package com.khnsoft.damta.common.extension
 
 inline fun <T, R> Result<T>.flatMap(
     transform: (T) -> Result<R>
