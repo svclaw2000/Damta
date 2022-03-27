@@ -5,7 +5,10 @@ sealed class UserErrorData(
     override val cause: Throwable? = null
 ) : Exception(message, cause) {
 
-    object DuplicatedUsername : UserErrorData()
+    data class DuplicatedUsername(
+        override val message: String? = null,
+        override val cause: Throwable? = null
+    ) : UserErrorData(message, cause)
 
     object InvalidUsernameOrPassword : UserErrorData()
 }
