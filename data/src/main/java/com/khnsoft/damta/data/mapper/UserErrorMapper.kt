@@ -5,4 +5,5 @@ import com.khnsoft.damta.domain.error.UserError
 
 internal fun UserErrorData.toDomain() = when (this) {
     is UserErrorData.DuplicatedUsername -> UserError.DuplicatedUsername
+    is UserErrorData.InvalidUsernameOrPassword -> UserError.InvalidUsernameOrPassword
 }

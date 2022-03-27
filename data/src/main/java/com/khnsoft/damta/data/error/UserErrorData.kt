@@ -6,4 +6,6 @@ sealed class UserErrorData(
 ) : Exception(message, cause) {
 
     object DuplicatedUsername : UserErrorData()
+
+    object InvalidUsernameOrPassword : UserErrorData()
 }
