@@ -8,6 +8,7 @@ import com.khnsoft.damta.data.source.UserLocalDataSource
 import com.khnsoft.damta.local.dao.UserDao
 import com.khnsoft.damta.local.mapper.toData
 import com.khnsoft.damta.local.mapper.toDto
+import com.khnsoft.damta.local.model.UserInfoDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.time.LocalDate
@@ -48,13 +49,16 @@ internal class UserLocalDataSourceImpl @Inject constructor(
         birthday: LocalDate
     ): Result<Unit> = runCatching {
         withContext(Dispatchers.IO) {
-            userDao.fetchUserById(userId) ?: throw UserErrorData.NoSuchUser
-            userDao.updateUser(
-                userId = userId,
-                email = email,
-                nickname = nickname,
-                birthday = birthday
+            val updatedRows = userDao.updateUser(
+                UserInfoDto(
+                    id = userId,
+                    email = email,
+                    nickname = nickname,
+                    birthday = birthday
+                )
             )
+
+            if (updatedRows == 0) throw UserErrorData.NoSuchUser
         }
     }
 
