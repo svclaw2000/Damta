@@ -2,7 +2,7 @@ package com.khnsoft.damta.data.repository
 
 import com.khnsoft.damta.common.extension.errorMap
 import com.khnsoft.damta.common.extension.flatMap
-import com.khnsoft.damta.data.error.UserErrorData
+import com.khnsoft.damta.data.error.ErrorData
 import com.khnsoft.damta.data.mapper.toData
 import com.khnsoft.damta.data.mapper.toDomain
 import com.khnsoft.damta.data.source.UserLocalDataSource
@@ -20,10 +20,8 @@ internal class UserRepositoryImpl @Inject constructor(
 
     override suspend fun signUp(user: User, password: String): Result<Unit> {
         return local.signUp(user.toData(), password).errorMap { error ->
-            when (error) {
-                is UserErrorData -> error.toDomain()
-                else -> Exception(error)
-            }
+            if (error is ErrorData) error.toDomain()
+            else Exception(error)
         }
     }
 
@@ -32,10 +30,8 @@ internal class UserRepositoryImpl @Inject constructor(
             this.userId = userId
             Result.success(Unit)
         }.errorMap { error ->
-            when (error) {
-                is UserErrorData -> error.toDomain()
-                else -> Exception(error)
-            }
+            if (error is ErrorData) error.toDomain()
+            else Exception(error)
         }
     }
 
@@ -50,10 +46,8 @@ internal class UserRepositoryImpl @Inject constructor(
             nickname = nickname,
             birthday = birthday
         ).errorMap { error ->
-            when (error) {
-                is UserErrorData -> error.toDomain()
-                else -> Exception(error)
-            }
+            if (error is ErrorData) error.toDomain()
+            else Exception(error)
         }
     }
 
@@ -63,10 +57,8 @@ internal class UserRepositoryImpl @Inject constructor(
         ).flatMap { user ->
             Result.success(user.toDomain())
         }.errorMap { error ->
-            when (error) {
-                is UserErrorData -> error.toDomain()
-                else -> Exception(error)
-            }
+            if (error is ErrorData) error.toDomain()
+            else Exception(error)
         }
     }
 }
