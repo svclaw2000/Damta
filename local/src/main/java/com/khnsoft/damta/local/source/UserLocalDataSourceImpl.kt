@@ -6,9 +6,11 @@ import com.khnsoft.damta.data.error.UserErrorData
 import com.khnsoft.damta.data.model.UserData
 import com.khnsoft.damta.data.source.UserLocalDataSource
 import com.khnsoft.damta.local.dao.UserDao
+import com.khnsoft.damta.local.mapper.toData
 import com.khnsoft.damta.local.mapper.toDto
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import java.time.LocalDate
 import javax.inject.Inject
 
 internal class UserLocalDataSourceImpl @Inject constructor(
@@ -36,6 +38,29 @@ internal class UserLocalDataSourceImpl @Inject constructor(
         withContext(Dispatchers.IO) {
             val user = userDao.fetchUserByUsernameAndPassword(username, password)
             user?.id ?: throw UserErrorData.InvalidUsernameOrPassword
+        }
+    }
+
+    override suspend fun updateUser(
+        userId: Int,
+        email: String,
+        nickname: String,
+        birthday: LocalDate
+    ): Result<Unit> = runCatching {
+        withContext(Dispatchers.IO) {
+            userDao.fetchUserById(userId) ?: throw UserErrorData.NoSuchUser
+            userDao.updateUser(
+                userId = userId,
+                email = email,
+                nickname = nickname,
+                birthday = birthday
+            )
+        }
+    }
+
+    override suspend fun fetchUserData(userId: Int): Result<UserData> = runCatching {
+        withContext(Dispatchers.IO) {
+            userDao.fetchUserById(userId)?.toData() ?: throw UserErrorData.NoSuchUser
         }
     }
 }
