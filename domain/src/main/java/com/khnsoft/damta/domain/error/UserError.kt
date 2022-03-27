@@ -22,4 +22,11 @@ sealed class UserError(
         override val message: String? = null,
         override val cause: Throwable? = null
     ) : UserError(message, cause)
+
+    object NotSignedIn : UserError()
+
+    data class NoSuchUser(
+        override val message: String? = null,
+        override val cause: Throwable? = null
+    ) : UserError(message, cause)
 }

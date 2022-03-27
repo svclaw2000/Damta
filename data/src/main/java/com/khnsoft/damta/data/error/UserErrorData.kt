@@ -11,4 +11,6 @@ sealed class UserErrorData(
     ) : UserErrorData(message, cause)
 
     object InvalidUsernameOrPassword : UserErrorData()
+
+    object NoSuchUser : UserErrorData()
 }

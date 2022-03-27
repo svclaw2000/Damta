@@ -8,4 +8,6 @@ internal fun UserErrorData.toDomain() = when (this) {
         UserError.DuplicatedUsername(message, this)
     is UserErrorData.InvalidUsernameOrPassword ->
         UserError.InvalidUsernameOrPassword(message, this)
+    is UserErrorData.NoSuchUser ->
+        UserError.NoSuchUser(message, this)
 }
