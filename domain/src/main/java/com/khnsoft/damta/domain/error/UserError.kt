@@ -13,7 +13,13 @@ sealed class UserError(
 
     object InvalidNickname : UserError()
 
-    object DuplicatedUsername : UserError()
+    data class DuplicatedUsername(
+        override val message: String? = null,
+        override val cause: Throwable? = null
+    ) : UserError(message, cause)
 
-    object InvalidUsernameOrPassword : UserError()
+    data class InvalidUsernameOrPassword(
+        override val message: String? = null,
+        override val cause: Throwable? = null
+    ) : UserError(message, cause)
 }

@@ -24,7 +24,7 @@ internal class UserLocalDataSourceImpl @Inject constructor(
         }
     }.errorMap { error ->
         when (error) {
-            is SQLiteConstraintException -> UserErrorData.DuplicatedUsername
+            is SQLiteConstraintException -> UserErrorData.DuplicatedUsername(cause = error)
             else -> Exception(error)
         }
     }
