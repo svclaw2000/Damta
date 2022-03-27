@@ -28,4 +28,14 @@ internal class UserLocalDataSourceImpl @Inject constructor(
             else -> Exception(error)
         }
     }
+
+    override suspend fun signIn(
+        username: String,
+        password: String
+    ): Result<Int> = runCatching {
+        withContext(Dispatchers.IO) {
+            val user = userDao.fetchUserByUsernameAndPassword(username, password)
+            user?.id ?: throw UserErrorData.InvalidUsernameOrPassword
+        }
+    }
 }
