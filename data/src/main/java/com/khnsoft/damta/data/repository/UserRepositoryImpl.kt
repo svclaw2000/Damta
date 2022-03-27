@@ -21,4 +21,8 @@ internal class UserRepositoryImpl @Inject constructor(
             }
         }
     }
+
+    override suspend fun signIn(username: String, password: String): Result<Unit> {
+        return local.signIn(username, password)
+    }
 }
