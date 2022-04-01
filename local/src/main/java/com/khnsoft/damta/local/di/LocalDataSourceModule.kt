@@ -1,6 +1,8 @@
 package com.khnsoft.damta.local.di
 
+import com.khnsoft.damta.data.source.AreaLocalDataSource
 import com.khnsoft.damta.data.source.UserLocalDataSource
+import com.khnsoft.damta.local.source.AreaLocalDataSourceImpl
 import com.khnsoft.damta.local.source.UserLocalDataSourceImpl
 import dagger.Binds
 import dagger.Module
@@ -15,4 +17,9 @@ internal abstract class LocalDataSourceModule {
     abstract fun bindUserLocalDataSource(
         source: UserLocalDataSourceImpl
     ): UserLocalDataSource
+
+    @Binds
+    abstract fun bindAreaLocalDataSource(
+        source: AreaLocalDataSourceImpl
+    ): AreaLocalDataSource
 }
