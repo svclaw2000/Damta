@@ -11,7 +11,7 @@ import java.time.LocalDate
         Index(value = ["username"], unique = true)
     ]
 )
-internal data class UserDto(
+data class UserDto(
     @PrimaryKey(autoGenerate = true)
     val id: Int,
     val username: String,
