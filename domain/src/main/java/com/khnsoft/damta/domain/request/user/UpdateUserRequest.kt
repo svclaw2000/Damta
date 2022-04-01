@@ -1,5 +1,6 @@
-package com.khnsoft.damta.domain.request
+package com.khnsoft.damta.domain.request.user
 
+import com.khnsoft.damta.domain.request.Request
 import java.time.LocalDate
 
 data class UpdateUserRequest(

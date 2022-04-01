@@ -1,4 +1,4 @@
-package com.khnsoft.damta.domain.usecase
+package com.khnsoft.damta.domain.usecase.user
 
 import com.khnsoft.damta.common.extension.flatMap
 import com.khnsoft.damta.domain.common.HashGenerator
@@ -6,8 +6,9 @@ import com.khnsoft.damta.domain.common.UserValidator
 import com.khnsoft.damta.domain.error.UserError
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
-import com.khnsoft.damta.domain.request.SignUpRequest
+import com.khnsoft.damta.domain.request.user.SignUpRequest
 import com.khnsoft.damta.domain.response.EmptyResponse
+import com.khnsoft.damta.domain.usecase.ResultUseCase
 import javax.inject.Inject
 
 internal class SignUpUseCase @Inject constructor(
