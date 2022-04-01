@@ -1,10 +1,10 @@
-package com.khnsoft.damta.domain.usecase
+package com.khnsoft.damta.domain.usecase.user
 
 import com.khnsoft.damta.domain.common.UserValidator
 import com.khnsoft.damta.domain.error.UserError
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
-import com.khnsoft.damta.domain.request.UpdateUserRequest
+import com.khnsoft.damta.domain.request.user.UpdateUserRequest
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.every
@@ -56,11 +56,13 @@ class UpdateUserUseCaseTest {
             userRepository.fetchCurrentUserData()
         } returns Result.success(updatedUser)
 
-        val result = useCase(UpdateUserRequest(
+        val result = useCase(
+            UpdateUserRequest(
             nickname = "nickname",
             email = "email",
             birthday = LocalDate.of(2022, 3, 27)
-        ))
+        )
+        )
 
         assertTrue(result.isSuccess)
         assertEquals(updatedUser, result.getOrNull()?.user)
@@ -79,11 +81,13 @@ class UpdateUserUseCaseTest {
             userRepository.updateUser("email", "nickname", LocalDate.of(2022, 3, 27))
         } returns Result.failure(UserError.NoSuchUser())
 
-        val result = useCase(UpdateUserRequest(
+        val result = useCase(
+            UpdateUserRequest(
             nickname = "nickname",
             email = "email",
             birthday = LocalDate.of(2022, 3, 27)
-        ))
+        )
+        )
 
         assertTrue(result.isFailure)
         assertEquals(UserError.NoSuchUser(), result.exceptionOrNull())
@@ -98,11 +102,13 @@ class UpdateUserUseCaseTest {
             userValidator.isEmailValid("email")
         } returns true
 
-        val result = useCase(UpdateUserRequest(
+        val result = useCase(
+            UpdateUserRequest(
             nickname = "nickname",
             email = "email",
             birthday = LocalDate.of(2022, 3, 27)
-        ))
+        )
+        )
 
         assertTrue(result.isFailure)
         assertEquals(UserError.InvalidNickname, result.exceptionOrNull())
@@ -117,11 +123,13 @@ class UpdateUserUseCaseTest {
             userValidator.isEmailValid("email")
         } returns false
 
-        val result = useCase(UpdateUserRequest(
+        val result = useCase(
+            UpdateUserRequest(
             nickname = "nickname",
             email = "email",
             birthday = LocalDate.of(2022, 3, 27)
-        ))
+        )
+        )
 
         assertTrue(result.isFailure)
         assertEquals(UserError.InvalidEmail, result.exceptionOrNull())

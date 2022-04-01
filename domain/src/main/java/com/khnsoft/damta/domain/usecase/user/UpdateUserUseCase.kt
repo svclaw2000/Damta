@@ -1,11 +1,12 @@
-package com.khnsoft.damta.domain.usecase
+package com.khnsoft.damta.domain.usecase.user
 
 import com.khnsoft.damta.common.extension.flatMap
 import com.khnsoft.damta.domain.common.UserValidator
 import com.khnsoft.damta.domain.error.UserError
 import com.khnsoft.damta.domain.repository.UserRepository
-import com.khnsoft.damta.domain.request.UpdateUserRequest
-import com.khnsoft.damta.domain.response.UpdateUserResponse
+import com.khnsoft.damta.domain.request.user.UpdateUserRequest
+import com.khnsoft.damta.domain.response.user.UpdateUserResponse
+import com.khnsoft.damta.domain.usecase.ResultUseCase
 import javax.inject.Inject
 
 internal class UpdateUserUseCase @Inject constructor(

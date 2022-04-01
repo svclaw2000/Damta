@@ -1,10 +1,10 @@
-package com.khnsoft.damta.domain.usecase
+package com.khnsoft.damta.domain.usecase.user
 
 import com.khnsoft.damta.domain.common.HashGenerator
 import com.khnsoft.damta.domain.common.UserValidator
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
-import com.khnsoft.damta.domain.request.SignUpRequest
+import com.khnsoft.damta.domain.request.user.SignUpRequest
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.every
@@ -63,13 +63,15 @@ class SignUpUseCaseTest {
             )
         } returns Result.success(Unit)
 
-        val result = useCase(SignUpRequest(
+        val result = useCase(
+            SignUpRequest(
             username = "username",
             password = "password",
             nickname = "nickname",
             birthday = LocalDate.of(2022, 1, 1),
             email = "email"
-        ))
+        )
+        )
 
         assertTrue(result.isSuccess)
     }
@@ -89,13 +91,15 @@ class SignUpUseCaseTest {
             userValidator.isUsernameValid("username")
         } returns true
 
-        val result = useCase(SignUpRequest(
+        val result = useCase(
+            SignUpRequest(
             username = "username",
             password = "password",
             nickname = "nickname",
             birthday = LocalDate.of(2022, 1, 1),
             email = "email"
-        ))
+        )
+        )
 
         assertTrue(result.isFailure)
     }
@@ -115,13 +119,15 @@ class SignUpUseCaseTest {
             userValidator.isUsernameValid("username")
         } returns true
 
-        val result = useCase(SignUpRequest(
+        val result = useCase(
+            SignUpRequest(
             username = "username",
             password = "password",
             nickname = "nickname",
             birthday = LocalDate.of(2022, 1, 1),
             email = "email"
-        ))
+        )
+        )
 
         assertTrue(result.isFailure)
     }
@@ -141,13 +147,15 @@ class SignUpUseCaseTest {
             userValidator.isUsernameValid("username")
         } returns true
 
-        val result = useCase(SignUpRequest(
+        val result = useCase(
+            SignUpRequest(
             username = "username",
             password = "password",
             nickname = "nickname",
             birthday = LocalDate.of(2022, 1, 1),
             email = "email"
-        ))
+        )
+        )
 
         assertTrue(result.isFailure)
     }
@@ -167,13 +175,15 @@ class SignUpUseCaseTest {
             userValidator.isUsernameValid("username")
         } returns false
 
-        val result = useCase(SignUpRequest(
+        val result = useCase(
+            SignUpRequest(
             username = "username",
             password = "password",
             nickname = "nickname",
             birthday = LocalDate.of(2022, 1, 1),
             email = "email"
-        ))
+        )
+        )
 
         assertTrue(result.isFailure)
     }
