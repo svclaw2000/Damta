@@ -8,7 +8,6 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".App"
@@ -21,6 +20,10 @@
         android:usesCleartextTraffic="true"
         android:hardwareAccelerated="false"
         android:largeHeap="true">
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakaoNativeAppKey" />
 
         <activity android:name=".SearchActivity" />
         <activity android:name=".NewReviewActivity" />
@@ -36,10 +39,6 @@
         <activity android:name=".MorePhotoActivity" />
         <activity android:name=".MoreReviewActivity" />
         <activity android:name=".DetailActivity" />
-
-        <meta-data
-            android:name="com.kakao.sdk.AppKey"
-            android:value="de405a507464fd8193bc236dca4735de" />
 
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
