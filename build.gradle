@@ -7,6 +7,9 @@ buildscript {
         junit_version = "4.13.2"
         mockk_version = "1.12.3"
         coroutine_version = "1.6.0"
+
+        secretProperties = new Properties()
+        secretProperties.load(project.rootProject.file('local.properties').newDataInputStream())
     }
 
     dependencies {
