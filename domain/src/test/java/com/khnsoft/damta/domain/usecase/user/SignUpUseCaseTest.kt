@@ -65,12 +65,12 @@ class SignUpUseCaseTest {
 
         val result = useCase(
             SignUpRequest(
-            username = "username",
-            password = "password",
-            nickname = "nickname",
-            birthday = LocalDate.of(2022, 1, 1),
-            email = "email"
-        )
+                username = "username",
+                password = "password",
+                nickname = "nickname",
+                birthday = LocalDate.of(2022, 1, 1),
+                email = "email"
+            )
         )
 
         assertTrue(result.isSuccess)
@@ -93,12 +93,12 @@ class SignUpUseCaseTest {
 
         val result = useCase(
             SignUpRequest(
-            username = "username",
-            password = "password",
-            nickname = "nickname",
-            birthday = LocalDate.of(2022, 1, 1),
-            email = "email"
-        )
+                username = "username",
+                password = "password",
+                nickname = "nickname",
+                birthday = LocalDate.of(2022, 1, 1),
+                email = "email"
+            )
         )
 
         assertTrue(result.isFailure)
@@ -121,12 +121,12 @@ class SignUpUseCaseTest {
 
         val result = useCase(
             SignUpRequest(
-            username = "username",
-            password = "password",
-            nickname = "nickname",
-            birthday = LocalDate.of(2022, 1, 1),
-            email = "email"
-        )
+                username = "username",
+                password = "password",
+                nickname = "nickname",
+                birthday = LocalDate.of(2022, 1, 1),
+                email = "email"
+            )
         )
 
         assertTrue(result.isFailure)
@@ -149,12 +149,12 @@ class SignUpUseCaseTest {
 
         val result = useCase(
             SignUpRequest(
-            username = "username",
-            password = "password",
-            nickname = "nickname",
-            birthday = LocalDate.of(2022, 1, 1),
-            email = "email"
-        )
+                username = "username",
+                password = "password",
+                nickname = "nickname",
+                birthday = LocalDate.of(2022, 1, 1),
+                email = "email"
+            )
         )
 
         assertTrue(result.isFailure)
@@ -177,12 +177,12 @@ class SignUpUseCaseTest {
 
         val result = useCase(
             SignUpRequest(
-            username = "username",
-            password = "password",
-            nickname = "nickname",
-            birthday = LocalDate.of(2022, 1, 1),
-            email = "email"
-        )
+                username = "username",
+                password = "password",
+                nickname = "nickname",
+                birthday = LocalDate.of(2022, 1, 1),
+                email = "email"
+            )
         )
 
         assertTrue(result.isFailure)

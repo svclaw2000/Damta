@@ -17,9 +17,11 @@ internal class AreaLocalDataSourceImpl @Inject constructor(
         areaData: AreaData
     ): Result<Int> = runCatching {
         withContext(Dispatchers.IO) {
-            areaDao.addArea(areaData.toDto().copy(
-                createdDate = LocalDateTime.now()
-            )).toInt()
+            areaDao.addArea(
+                areaData.toDto().copy(
+                    createdDate = LocalDateTime.now()
+                )
+            ).toInt()
         }
     }
 }
