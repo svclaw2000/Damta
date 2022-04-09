@@ -58,10 +58,10 @@ class UpdateUserUseCaseTest {
 
         val result = useCase(
             UpdateUserRequest(
-            nickname = "nickname",
-            email = "email",
-            birthday = LocalDate.of(2022, 3, 27)
-        )
+                nickname = "nickname",
+                email = "email",
+                birthday = LocalDate.of(2022, 3, 27)
+            )
         )
 
         assertTrue(result.isSuccess)
@@ -83,10 +83,10 @@ class UpdateUserUseCaseTest {
 
         val result = useCase(
             UpdateUserRequest(
-            nickname = "nickname",
-            email = "email",
-            birthday = LocalDate.of(2022, 3, 27)
-        )
+                nickname = "nickname",
+                email = "email",
+                birthday = LocalDate.of(2022, 3, 27)
+            )
         )
 
         assertTrue(result.isFailure)
@@ -104,10 +104,10 @@ class UpdateUserUseCaseTest {
 
         val result = useCase(
             UpdateUserRequest(
-            nickname = "nickname",
-            email = "email",
-            birthday = LocalDate.of(2022, 3, 27)
-        )
+                nickname = "nickname",
+                email = "email",
+                birthday = LocalDate.of(2022, 3, 27)
+            )
         )
 
         assertTrue(result.isFailure)
@@ -125,10 +125,10 @@ class UpdateUserUseCaseTest {
 
         val result = useCase(
             UpdateUserRequest(
-            nickname = "nickname",
-            email = "email",
-            birthday = LocalDate.of(2022, 3, 27)
-        )
+                nickname = "nickname",
+                email = "email",
+                birthday = LocalDate.of(2022, 3, 27)
+            )
         )
 
         assertTrue(result.isFailure)

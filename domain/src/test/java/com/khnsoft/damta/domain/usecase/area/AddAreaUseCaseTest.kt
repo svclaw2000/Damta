@@ -31,18 +31,20 @@ class AddAreaUseCaseTest {
             areaRepository.addArea(any())
         } returns Result.success(1)
 
-        val result = useCase(AddAreaRequest(
-            name = "name",
-            type = AreaType.OPENED,
-            place = Place(
-                name = null,
-                address = null,
-                roadAddress = null,
-                x = 0.0,
-                y = 0.0
-            ),
-            facilities = emptySet()
-        ))
+        val result = useCase(
+            AddAreaRequest(
+                name = "name",
+                type = AreaType.OPENED,
+                place = Place(
+                    name = null,
+                    address = null,
+                    roadAddress = null,
+                    x = 0.0,
+                    y = 0.0
+                ),
+                facilities = emptySet()
+            )
+        )
 
         assertTrue(result.isSuccess)
         assertEquals(1, result.getOrNull()?.areaId)
@@ -51,18 +53,20 @@ class AddAreaUseCaseTest {
     @Test
     fun invoke_emptyName_throwsEmptyNameError(): Unit = runBlocking {
 
-        val result = useCase(AddAreaRequest(
-            name = "",
-            type = AreaType.OPENED,
-            place = Place(
-                name = null,
-                address = null,
-                roadAddress = null,
-                x = 0.0,
-                y = 0.0
-            ),
-            facilities = emptySet()
-        ))
+        val result = useCase(
+            AddAreaRequest(
+                name = "",
+                type = AreaType.OPENED,
+                place = Place(
+                    name = null,
+                    address = null,
+                    roadAddress = null,
+                    x = 0.0,
+                    y = 0.0
+                ),
+                facilities = emptySet()
+            )
+        )
 
         assertTrue(result.isFailure)
         assertEquals(AreaError.EmptyName, result.exceptionOrNull())

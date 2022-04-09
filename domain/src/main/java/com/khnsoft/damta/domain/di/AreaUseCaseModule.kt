@@ -15,6 +15,6 @@ internal abstract class AreaUseCaseModule {
 
     @Binds
     abstract fun bindAddAreaUseCase(
-       useCase: AddAreaUseCase
+        useCase: AddAreaUseCase
     ): ResultUseCase<AddAreaRequest, AddAreaResponse>
 }
