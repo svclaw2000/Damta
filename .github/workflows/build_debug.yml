@@ -45,6 +45,9 @@ jobs:
         run: |
           ./gradlew assembleDebug
 
+      - name: Check KtLint
+        run: ./gradlew ktlintCheck
+
       - name: Test Library
         run: |
           ./gradlew :common:test
