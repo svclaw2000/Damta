@@ -17,6 +17,10 @@ android {
         versionCode 1
         versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = [
+                KAKAO_NATIVE_APP_KEY: rootProject.ext.secretProperties['kakaoNativeAppKey']
+        ]
     }
 
     buildTypes {

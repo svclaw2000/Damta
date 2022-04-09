@@ -14,6 +14,6 @@
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
-            android:value="@string/kakaoNativeAppKey" />
+            android:value="${KAKAO_NATIVE_APP_KEY}" />
     </application>
 </manifest>
