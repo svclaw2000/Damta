@@ -2,13 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.khnsoft.damta">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <application
         android:name=".App"
         android:allowBackup="true"
@@ -17,51 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true"
-        android:hardwareAccelerated="false"
-        android:largeHeap="true">
+        android:hardwareAccelerated="false">
 
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakaoNativeAppKey" />
-
-        <activity android:name=".SearchActivity" />
-        <activity android:name=".NewReviewActivity" />
-        <activity android:name=".ServiceActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".ReviewActivity" />
-        <activity android:name=".BookmarkActivity" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".MypageActivity" />
-        <activity android:name=".RegisterAreaActivityThank" />
-        <activity android:name=".CheckAreaStandardActivity" />
-        <activity android:name=".RegisterAreaWarningActivity" />
-        <activity android:name=".MorePhotoActivity" />
-        <activity android:name=".MoreReviewActivity" />
-        <activity android:name=".DetailActivity" />
-
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".LoadingActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterAreaActivity" />
-
-        <provider
-            android:name="androidx.core.content.FileProvider"
-            android:authorities="com.khnsoft.damta.provider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-
-            <meta-data
-                android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths" />
-        </provider>
     </application>
 </manifest>
