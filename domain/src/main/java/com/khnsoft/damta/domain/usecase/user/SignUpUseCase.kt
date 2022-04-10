@@ -6,18 +6,19 @@ import com.khnsoft.damta.domain.common.UserValidator
 import com.khnsoft.damta.domain.error.UserError
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
-import com.khnsoft.damta.domain.request.user.SignUpRequest
-import com.khnsoft.damta.domain.response.EmptyResponse
+import com.khnsoft.damta.domain.usecase.Request
+import com.khnsoft.damta.domain.usecase.Response
 import com.khnsoft.damta.domain.usecase.ResultUseCase
+import java.time.LocalDate
 import javax.inject.Inject
 
-internal class SignUpUseCase @Inject constructor(
+class SignUpUseCase @Inject constructor(
     private val userRepository: UserRepository,
     private val validator: UserValidator,
     private val hashGenerator: HashGenerator
-) : ResultUseCase<SignUpRequest, EmptyResponse> {
+) : ResultUseCase<SignUpUseCase.SignUpRequest, Response.Empty> {
 
-    override suspend fun invoke(request: SignUpRequest): Result<EmptyResponse> {
+    override suspend fun invoke(request: SignUpRequest): Result<Response.Empty> {
         when {
             !validator.isUsernameValid(request.username) ->
                 return Result.failure(UserError.InvalidUsername)
@@ -38,7 +39,15 @@ internal class SignUpUseCase @Inject constructor(
         val hashedPassword = hashGenerator.hashPasswordWithSalt(request.password, user.username)
 
         return userRepository.signUp(user, hashedPassword).flatMap {
-            Result.success(EmptyResponse)
+            Result.success(Response.Empty)
         }
     }
+
+    data class SignUpRequest(
+        val username: String,
+        val password: String,
+        val nickname: String,
+        val birthday: LocalDate,
+        val email: String
+    ) : Request
 }

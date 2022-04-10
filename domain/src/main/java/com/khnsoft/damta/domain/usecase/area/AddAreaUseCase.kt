@@ -2,15 +2,18 @@ package com.khnsoft.damta.domain.usecase.area
 
 import com.khnsoft.damta.domain.error.AreaError
 import com.khnsoft.damta.domain.model.Area
+import com.khnsoft.damta.domain.model.AreaType
+import com.khnsoft.damta.domain.model.Facility
+import com.khnsoft.damta.domain.model.Place
 import com.khnsoft.damta.domain.repository.AreaRepository
-import com.khnsoft.damta.domain.request.area.AddAreaRequest
-import com.khnsoft.damta.domain.response.area.AddAreaResponse
+import com.khnsoft.damta.domain.usecase.Request
+import com.khnsoft.damta.domain.usecase.Response
 import com.khnsoft.damta.domain.usecase.ResultUseCase
 import javax.inject.Inject
 
-internal class AddAreaUseCase @Inject constructor(
+class AddAreaUseCase @Inject constructor(
     private val areaRepository: AreaRepository
-) : ResultUseCase<AddAreaRequest, AddAreaResponse> {
+) : ResultUseCase<AddAreaUseCase.AddAreaRequest, AddAreaUseCase.AddAreaResponse> {
 
     override suspend fun invoke(request: AddAreaRequest): Result<AddAreaResponse> {
         if (request.name.isBlank()) {
@@ -28,4 +31,15 @@ internal class AddAreaUseCase @Inject constructor(
             AddAreaResponse(areaId)
         }
     }
+
+    data class AddAreaResponse(
+        val areaId: Int
+    ) : Response
+
+    data class AddAreaRequest(
+        val name: String,
+        val type: AreaType,
+        val place: Place,
+        val facilities: Set<Facility>
+    ) : Request
 }

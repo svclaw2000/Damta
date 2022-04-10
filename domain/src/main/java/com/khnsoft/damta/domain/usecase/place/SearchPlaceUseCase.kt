@@ -1,15 +1,16 @@
 package com.khnsoft.damta.domain.usecase.place
 
 import com.khnsoft.damta.domain.error.PlaceError
+import com.khnsoft.damta.domain.model.Place
 import com.khnsoft.damta.domain.repository.PlaceRepository
-import com.khnsoft.damta.domain.request.place.SearchPlaceRequest
-import com.khnsoft.damta.domain.response.place.SearchPlaceResponse
+import com.khnsoft.damta.domain.usecase.Request
+import com.khnsoft.damta.domain.usecase.Response
 import com.khnsoft.damta.domain.usecase.ResultUseCase
 import javax.inject.Inject
 
-internal class SearchPlaceUseCase @Inject constructor(
+class SearchPlaceUseCase @Inject constructor(
     private val placeRepository: PlaceRepository
-) : ResultUseCase<SearchPlaceRequest, SearchPlaceResponse> {
+) : ResultUseCase<SearchPlaceUseCase.SearchPlaceRequest, SearchPlaceUseCase.SearchPlaceResponse> {
 
     override suspend fun invoke(request: SearchPlaceRequest): Result<SearchPlaceResponse> {
         if (request.keyword.isBlank()) {
@@ -25,4 +26,15 @@ internal class SearchPlaceUseCase @Inject constructor(
             SearchPlaceResponse(placeList)
         }
     }
+
+    data class SearchPlaceRequest(
+        val keyword: String,
+        val page: Int,
+        val size: Int,
+        val isAddress: Boolean = false
+    ) : Request
+
+    data class SearchPlaceResponse(
+        val placeList: List<Place>
+    ) : Response
 }
