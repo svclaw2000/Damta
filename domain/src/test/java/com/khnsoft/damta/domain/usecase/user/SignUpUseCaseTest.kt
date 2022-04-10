@@ -4,7 +4,6 @@ import com.khnsoft.damta.domain.common.HashGenerator
 import com.khnsoft.damta.domain.common.UserValidator
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
-import com.khnsoft.damta.domain.request.user.SignUpRequest
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.every
@@ -64,7 +63,7 @@ class SignUpUseCaseTest {
         } returns Result.success(Unit)
 
         val result = useCase(
-            SignUpRequest(
+            SignUpUseCase.SignUpRequest(
                 username = "username",
                 password = "password",
                 nickname = "nickname",
@@ -92,7 +91,7 @@ class SignUpUseCaseTest {
         } returns true
 
         val result = useCase(
-            SignUpRequest(
+            SignUpUseCase.SignUpRequest(
                 username = "username",
                 password = "password",
                 nickname = "nickname",
@@ -120,7 +119,7 @@ class SignUpUseCaseTest {
         } returns true
 
         val result = useCase(
-            SignUpRequest(
+            SignUpUseCase.SignUpRequest(
                 username = "username",
                 password = "password",
                 nickname = "nickname",
@@ -148,7 +147,7 @@ class SignUpUseCaseTest {
         } returns true
 
         val result = useCase(
-            SignUpRequest(
+            SignUpUseCase.SignUpRequest(
                 username = "username",
                 password = "password",
                 nickname = "nickname",
@@ -176,7 +175,7 @@ class SignUpUseCaseTest {
         } returns false
 
         val result = useCase(
-            SignUpRequest(
+            SignUpUseCase.SignUpRequest(
                 username = "username",
                 password = "password",
                 nickname = "nickname",
