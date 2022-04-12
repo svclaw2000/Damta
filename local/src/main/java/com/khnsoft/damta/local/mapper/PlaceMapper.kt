@@ -10,3 +10,11 @@ internal fun PlaceData.toDto() = PlaceDto(
     x = x,
     y = y
 )
+
+internal fun PlaceDto.toData() = PlaceData(
+    name = name,
+    address = address,
+    roadAddress = roadAddress,
+    x = x,
+    y = y
+)
