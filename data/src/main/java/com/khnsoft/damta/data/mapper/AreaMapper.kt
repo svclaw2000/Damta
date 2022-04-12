@@ -11,3 +11,12 @@ internal fun Area.toData() = AreaData(
     facilities = facilities.map { it.toData() }.toSet(),
     createdDate = createdDate
 )
+
+internal fun AreaData.toDomain() = Area(
+    id = id,
+    name = name,
+    type = type.toDomain(),
+    place = place.toDomain(),
+    facilities = facilities.map { it.toDomain() }.toSet(),
+    createdDate = createdDate
+)
