@@ -4,7 +4,6 @@ import com.khnsoft.damta.domain.common.UserValidator
 import com.khnsoft.damta.domain.error.UserError
 import com.khnsoft.damta.domain.model.User
 import com.khnsoft.damta.domain.repository.UserRepository
-import com.khnsoft.damta.domain.request.user.UpdateUserRequest
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.every
@@ -57,7 +56,7 @@ class UpdateUserUseCaseTest {
         } returns Result.success(updatedUser)
 
         val result = useCase(
-            UpdateUserRequest(
+            UpdateUserUseCase.Request(
                 nickname = "nickname",
                 email = "email",
                 birthday = LocalDate.of(2022, 3, 27)
@@ -82,7 +81,7 @@ class UpdateUserUseCaseTest {
         } returns Result.failure(UserError.NoSuchUser())
 
         val result = useCase(
-            UpdateUserRequest(
+            UpdateUserUseCase.Request(
                 nickname = "nickname",
                 email = "email",
                 birthday = LocalDate.of(2022, 3, 27)
@@ -103,7 +102,7 @@ class UpdateUserUseCaseTest {
         } returns true
 
         val result = useCase(
-            UpdateUserRequest(
+            UpdateUserUseCase.Request(
                 nickname = "nickname",
                 email = "email",
                 birthday = LocalDate.of(2022, 3, 27)
@@ -124,7 +123,7 @@ class UpdateUserUseCaseTest {
         } returns false
 
         val result = useCase(
-            UpdateUserRequest(
+            UpdateUserUseCase.Request(
                 nickname = "nickname",
                 email = "email",
                 birthday = LocalDate.of(2022, 3, 27)
