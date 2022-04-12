@@ -4,7 +4,6 @@ import com.khnsoft.damta.domain.error.AreaError
 import com.khnsoft.damta.domain.model.AreaType
 import com.khnsoft.damta.domain.model.Place
 import com.khnsoft.damta.domain.repository.AreaRepository
-import com.khnsoft.damta.domain.request.area.AddAreaRequest
 import io.mockk.MockKAnnotations
 import io.mockk.coEvery
 import io.mockk.impl.annotations.MockK
@@ -32,7 +31,7 @@ class AddAreaUseCaseTest {
         } returns Result.success(1)
 
         val result = useCase(
-            AddAreaRequest(
+            AddAreaUseCase.Request(
                 name = "name",
                 type = AreaType.OPENED,
                 place = Place(
@@ -54,7 +53,7 @@ class AddAreaUseCaseTest {
     fun invoke_emptyName_throwsEmptyNameError(): Unit = runBlocking {
 
         val result = useCase(
-            AddAreaRequest(
+            AddAreaUseCase.Request(
                 name = "",
                 type = AreaType.OPENED,
                 place = Place(
