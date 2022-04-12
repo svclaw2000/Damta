@@ -18,3 +18,17 @@ internal fun AreaData.toDto() = AreaDto(
     ),
     createdDate = createdDate
 )
+
+internal fun AreaDto.toData() = AreaData(
+    id = id,
+    name = name,
+    type = type,
+    place = place.toData(),
+    facilities = listOfNotNull(
+        if (facilities.ashTray) FacilityData.ASH_TRAY else null,
+        if (facilities.vent) FacilityData.VENT else null,
+        if (facilities.bench) FacilityData.BENCH else null,
+        if (facilities.machine) FacilityData.MACHINE else null,
+    ).toSet(),
+    createdDate = createdDate
+)
