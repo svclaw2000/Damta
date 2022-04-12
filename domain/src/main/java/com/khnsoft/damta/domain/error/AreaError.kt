@@ -6,4 +6,6 @@ sealed class AreaError(
 ) : Exception(message, cause) {
 
     object EmptyName : AreaError()
+
+    object EmptyKeyword : AreaError()
 }
