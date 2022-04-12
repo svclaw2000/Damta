@@ -10,11 +10,20 @@ import com.khnsoft.damta.domain.repository.AreaRepository
 import javax.inject.Inject
 
 internal class AreaRepositoryImpl @Inject constructor(
-    private val remote: AreaLocalDataSource
+    private val local: AreaLocalDataSource
 ) : AreaRepository {
 
     override suspend fun addArea(area: Area): Result<Int> {
-        return remote.addArea(area.toData()).errorMap { error ->
+        return local.addArea(area.toData()).errorMap { error ->
+            if (error is ErrorData) error.toDomain()
+            else Exception(error)
+        }
+    }
+
+    override suspend fun searchArea(keyword: String): Result<List<Area>> {
+        return local.searchArea(keyword).map { areaList ->
+            areaList.map { it.toDomain() }
+        }.errorMap { error ->
             if (error is ErrorData) error.toDomain()
             else Exception(error)
         }
