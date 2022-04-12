@@ -1,9 +1,9 @@
 package com.khnsoft.damta.domain.model
 
 data class Place(
-    val name: String?,
-    val address: String?,
-    val roadAddress: String?,
-    val x: Double,
-    val y: Double
+    val name: String? = null,
+    val address: String? = null,
+    val roadAddress: String? = null,
+    val x: Double = 0.0,
+    val y: Double = 0.0
 )
